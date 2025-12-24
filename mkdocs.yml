@@ -1,0 +1,124 @@
+site_name: ICE Studio
+site_description: Integrated Cognitive Environment — a system-level development environment
+site_author: Francesco Maiomascio
+site_url: https://francescomaiomascio.github.io/ICE-Studio/
+
+repo_name: francescomaiomascio/ICE-Studio
+repo_url: https://github.com/francescomaiomascio/ICE-Studio
+edit_uri: ""
+
+plugins:
+  - search
+  - git-revision-date
+
+theme:
+  name: material
+  language: en
+  palette:
+    scheme: slate
+    primary: blue grey
+    accent: cyan
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.indexes
+    - content.tabs.link
+    - content.code.copy
+    - content.code.annotate
+    - search.suggest
+    - search.highlight
+    - toc.integrate
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - admonition
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed
+  - pymdownx.snippets
+  - pymdownx.emoji
+
+nav:
+  - Home: index.md
+
+  - Getting Started:
+      - getting-started/index.md
+      - Overview: getting-started/overview.md
+      - Requirements: getting-started/requirements.md
+      - Local Runtime: getting-started/local-runtime.md
+      - GUI: getting-started/gui.md
+      - First Launch: getting-started/first-launch.md
+
+  - Tutorials:
+      - tutorials/index.md
+      - First Run: tutorials/first-run.md
+      - Dashboard Tour: tutorials/dashboard-tour.md
+      - System Agent: tutorials/system-agent.md
+      - Logs & Analysis: tutorials/logs-and-analysis.md
+
+  - Concepts:
+      - concepts/index.md
+      - Terminology: concepts/terminology.md
+      - Project vs Workspace: concepts/project-vs-workspace.md
+      - Knowledge Types: concepts/knowledge-types.md
+      - Phases vs Modes: concepts/phases-vs-modes.md
+      - System vs Project: concepts/system-vs-project.md
+
+  - Architecture:
+      - architecture/index.md
+      - Cognitive Phases: architecture/phases.md
+      - ICE Engine: architecture/engine.md
+      - Backend Runtime: architecture/backend-runtime.md
+      - GUI Architecture: architecture/gui.md
+      - Logical Topology: architecture/logical-topology.md
+
+  - Runtime:
+      - runtime/index.md
+      - Lifecycle: runtime/lifecycle.md
+      - Logging: runtime/logging.md
+      - Orchestration: runtime/orchestration.md
+      - Diagnostics: runtime/diagnostics.md
+
+  - Cognition:
+      - cognition/index.md
+      - Agents: cognition/agents.md
+      - Knowledge: cognition/knowledge.md
+      - LLM Integration: cognition/llm.md
+      - Memory: cognition/memory.md
+
+  - Networking:
+      - networking/index.md
+      - ICENet: networking/icenet.md
+      - ICEP: networking/icep.md
+      - Network Topology: networking/network-topology.md
+      - Flake: networking/flake.md
+      - Snowball: networking/snowball.md
+
+  - Security:
+      - security/index.md
+      - Local-First: security/local-first.md
+      - Data Isolation: security/data-isolation.md
+      - Knowledge Boundaries: security/knowledge-boundaries.md
+      - Threat Model: security/threat-model.md
+
+  - Extensibility:
+      - extensibility/index.md
+      - Plugins: extensibility/plugins.md
+      - Agent Extensions: extensibility/agents.md
+      - Protocol Extensions: extensibility/protocols.md
+      - Future Engines: extensibility/future-engines.md
+
+  - Development:
+      - development/index.md
+      - Status: development/status.md
+      - Roadmap: development/roadmap.md
+      - Decisions: development/decisions.md
+      - Milestones: development/milestones.md
+
+  - Specs:
+      - specs/panels/OVERVIEW.md
