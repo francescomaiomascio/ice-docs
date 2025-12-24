@@ -34,6 +34,7 @@ This repository hosts **documentation only**.
 Private source repository:  
 https://github.com/francescomaiomascio/ICE-Studio
 
+---
 
 ## What ICE Studio Is
 
