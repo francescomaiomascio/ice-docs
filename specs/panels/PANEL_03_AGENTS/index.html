@@ -1,0 +1,3566 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Integrated Cognitive Environment — a system-level development environment">
+      
+      
+        <meta name="author" content="Francesco Maiomascio">
+      
+      
+        <link rel="canonical" href="https://francescomaiomascio.github.io/ICE-Studio/specs/panels/PANEL_03_AGENTS/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>PANEL 03 — AGENTS PANEL - ICE Studio</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#panel-03-agents-panel" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="ICE Studio" class="md-header__button md-logo" aria-label="ICE Studio" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ICE Studio
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              PANEL 03 — AGENTS PANEL
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/francescomaiomascio/ICE-Studio" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    francescomaiomascio/ICE-Studio
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="ICE Studio" class="md-nav__button md-logo" aria-label="ICE Studio" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ICE Studio
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/francescomaiomascio/ICE-Studio" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    francescomaiomascio/ICE-Studio
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../getting-started/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Getting Started
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/requirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Requirements
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/local-runtime/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Local Runtime
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/gui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GUI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/first-launch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    First Launch
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../tutorials/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tutorials
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/first-run/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    First Run
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/dashboard-tour/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dashboard Tour
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/system-agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System Agent
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/logs-and-analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Logs & Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../concepts/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Concepts
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Concepts
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../concepts/terminology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Terminology
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../concepts/project-vs-workspace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project vs Workspace
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../concepts/knowledge-types/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Knowledge Types
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../concepts/phases-vs-modes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Phases vs Modes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../concepts/system-vs-project/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System vs Project
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../architecture/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Architecture
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../architecture/phases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cognitive Phases
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../architecture/engine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ICE Engine
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../architecture/backend-runtime/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backend Runtime
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../architecture/gui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GUI Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../architecture/logical-topology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Logical Topology
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../runtime/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Runtime
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Runtime
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../runtime/lifecycle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lifecycle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../runtime/logging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Logging
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../runtime/orchestration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Orchestration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../runtime/diagnostics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diagnostics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../cognition/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cognition
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Cognition
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cognition/agents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agents
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cognition/knowledge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Knowledge
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cognition/llm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LLM Integration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cognition/memory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Memory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../networking/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Networking
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Networking
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../networking/icenet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ICENet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../networking/icep/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ICEP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../networking/network-topology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Network Topology
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../networking/flake/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flake
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../networking/snowball/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Snowball
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../security/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_9" id="__nav_9_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Security
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../security/local-first/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Local-First
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../security/data-isolation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Isolation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../security/knowledge-boundaries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Knowledge Boundaries
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../security/threat-model/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Threat Model
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_10" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../extensibility/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Extensibility
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_10" id="__nav_10_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Extensibility
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../extensibility/plugins/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plugins
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../extensibility/agents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Extensions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../extensibility/protocols/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Protocol Extensions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../extensibility/future-engines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Future Engines
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../development/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Development
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_11" id="__nav_11_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Development
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../development/status/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Status
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../development/roadmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roadmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../development/decisions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Decisions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../development/milestones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Milestones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Specs
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Specs
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../OVERVIEW/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OVERVIEW
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="panel-03-agents-panel">PANEL 03 — AGENTS PANEL<a class="headerlink" href="#panel-03-agents-panel" title="Permanent link">&para;</a></h1>
+<p><strong>Workspace → Network degli Agenti + Console Operativa</strong></p>
+<hr />
+<h2 id="0-overview-funzionale">0. OVERVIEW FUNZIONALE<a class="headerlink" href="#0-overview-funzionale" title="Permanent link">&para;</a></h2>
+<p>L'<strong>Agents Panel</strong> è il pannello centrale di ispezione, lancio e configurazione degli agenti AI del workspace.</p>
+<p>Qui l'utente può:</p>
+<ul>
+<li><strong>Vedere lo stato in tempo reale</strong> degli agenti (running / idle / error)</li>
+<li><strong>Eseguire singoli agenti</strong> o "run all"</li>
+<li><strong>Interagire con ciascun agente</strong> tramite una mini-console contestuale dedicata</li>
+<li><strong>Ricevere log di attività live</strong> (AgentActivityPanel)</li>
+<li><strong>Configurare la pipeline LLM</strong> locale / cloud (AgentLLMConfig)</li>
+<li><strong>Configurare la pipeline di embedding</strong> (AgentEmbeddingConfig)</li>
+<li><strong>Monitorare errori, progressi, eventi</strong> e aggiornamenti runtime pilotati dal backend</li>
+</ul>
+<p>È l'unico pannello che offre:</p>
+<ul>
+<li><strong>Vista sintetica</strong> della rete degli agenti</li>
+<li><strong>Controllo diretto</strong> su ogni agente</li>
+<li><strong>Diagnostica completa</strong> in tempo reale</li>
+<li><strong>Configurazione LLM e embedding</strong> senza lasciare il workspace</li>
+<li><strong>Integrazione diretta</strong> con tutti gli agenti del sistema</li>
+</ul>
+<h3 id="agenti-integrati">Agenti Integrati<a class="headerlink" href="#agenti-integrati" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>PlannerAgent</strong> — pianificazione task e strategia</li>
+<li><strong>AnalyzerAgent</strong> — analisi codice e dipendenze</li>
+<li><strong>ScannerAgent</strong> — scansione file e pattern</li>
+<li><strong>KnowledgeAgent</strong> — gestione knowledge base</li>
+<li><strong>RefactorAgent</strong> — refactoring automatico</li>
+<li><strong>ValidatorAgent</strong> — validazione e testing</li>
+<li><strong>LogAgent</strong> — gestione logging avanzato</li>
+<li><strong>HistorianAgent</strong> — tracciamento modifiche storiche</li>
+<li><strong>GitAgent</strong> — operazioni git automatizzate</li>
+<li><strong>CodeAgent</strong> — generazione e patching codice</li>
+<li><strong>LLM Agent</strong> — interfaccia LLM globale</li>
+</ul>
+<p>È il pannello tecnico avanzato, destinato agli utenti che vogliono "vedere cosa succede dietro al sipario".</p>
+<hr />
+<h2 id="1-layout-strutturale-ui">1. LAYOUT STRUTTURALE (UI)<a class="headerlink" href="#1-layout-strutturale-ui" title="Permanent link">&para;</a></h2>
+<h3 id="11-layout-globale-ereditato-dal-workspace">1.1 Layout globale ereditato dal Workspace<a class="headerlink" href="#11-layout-globale-ereditato-dal-workspace" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Chat LLM a destra</strong> (persistente) per inviare comandi naturali relativi agli agenti</li>
+<li><strong>TopBar</strong> per sync workspace</li>
+<li><strong>Downbar</strong> per navigazione tra pannelli 1..11</li>
+<li><strong>Terminal Toggle</strong> (debug console / output)</li>
+<li><strong>Sidebar file explorer</strong> come da workspace standard</li>
+</ul>
+<h3 id="12-layout-interno-dellagents-panel">1.2 Layout interno dell'Agents Panel<a class="headerlink" href="#12-layout-interno-dellagents-panel" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code> ┌──────────────────────────────────────────────────────────────────────────┐
+ │ AGENTS PANEL HEADER                                                      │
+ │  [Title] [Run All Button] [Refresh Status] [Config Toggle]              │
+ ├──────────────────────────────────────────────────────────────────────────┤
+ │ TOP CONFIG GRID (collapsible)                                            │
+ │  ┌────────────────────────────┬────────────────────────────────────┐    │
+ │  │ LLM Configuration          │ Embedding Configuration            │    │
+ │  │ (AgentLLMConfig)           │ (AgentEmbeddingConfig)             │    │
+ │  │ - Provider selection       │ - Provider selection               │    │
+ │  │ - Cloud/Local mode         │ - Cloud/Local mode                 │    │
+ │  │ - Model autodiscovery      │ - Model autodiscovery              │    │
+ │  │ - Server start/stop        │ - Server start/stop                │    │
+ │  │ - Connection test          │ - Connection test                  │    │
+ │  └────────────────────────────┴────────────────────────────────────┘    │
+ ├──────────────────────────────────────────────────────────────────────────┤
+ │ AGENTS STATUS SECTION                                                    │
+ │  ┌────────┬────────┬────────┬────────┬────────┐                         │
+ │  │ AGENT  │ AGENT  │ AGENT  │ AGENT  │ AGENT  │                         │
+ │  │ CARD   │ CARD   │ CARD   │ CARD   │ CARD   │                         │
+ │  │ Avatar │ Avatar │ Avatar │ Avatar │ Avatar │                         │
+ │  │ Status │ Status │ Status │ Status │ Status │                         │
+ │  │ [Run]  │ [Run]  │ [Run]  │ [Run]  │ [Run]  │                         │
+ │  └────────┴────────┴────────┴────────┴────────┘                         │
+ │  ┌────────┬────────┬────────┬────────┬────────┐                         │
+ │  │ AGENT  │ AGENT  │ AGENT  │ AGENT  │ AGENT  │                         │
+ │  │ CARD   │ CARD   │ CARD   │ CARD   │ CARD   │                         │
+ │  └────────┴────────┴────────┴────────┴────────┘                         │
+ │                                                                           │
+ │  [Hover on card → Mini-Console Popover]                                  │
+ ├──────────────────────────────────────────────────────────────────────────┤
+ │ AGENT ACTIVITY LOG (AgentActivityPanel)                                  │
+ │  ┌────────────────────────────────────────────────────────────────┐     │
+ │  │ [12:34:56] PlannerAgent → Task decomposition started            │     │
+ │  │ [12:35:12] AnalyzerAgent → Analyzing dependencies...            │     │
+ │  │ [12:35:45] KnowledgeAgent → Indexed 47 documents                │     │
+ │  │ [12:36:01] PlannerAgent → Plan completed ✓                      │     │
+ │  │ [12:36:23] CodeAgent → Generated patch for main.rs              │     │
+ │  │ [12:36:45] ValidatorAgent → Running tests...                    │     │
+ │  │ ...                                                              │     │
+ │  │ [Live streaming updates from all agents]                        │     │
+ │  └────────────────────────────────────────────────────────────────┘     │
+ ├──────────────────────────────────────────────────────────────────────────┤
+ │ CHAT LLM (sidebar destra, persistente)                                   │
+ │  &quot;Run planner agent on current workspace&quot;                                │
+ │  &quot;Show me the last error from ValidatorAgent&quot;                            │
+ │  &quot;Configure local LLM with llama model&quot;                                  │
+ └──────────────────────────────────────────────────────────────────────────┘
+</code></pre></div>
+<h3 id="13-componenti-modulari-inclusi">1.3 Componenti modulari inclusi<a class="headerlink" href="#13-componenti-modulari-inclusi" title="Permanent link">&para;</a></h3>
+<h4 id="1-agentstatuspanel">1. AgentStatusPanel<a class="headerlink" href="#1-agentstatuspanel" title="Permanent link">&para;</a></h4>
+<p>Gestisce:
+* Avatar grid degli agenti
+* Status indicator per ogni agente
+* Aggiornamenti real-time
+* Run agent singolo
+* Run-all batch
+* Hover console contextual</p>
+<h4 id="2-agentconsolepanel">2. AgentConsolePanel<a class="headerlink" href="#2-agentconsolepanel" title="Permanent link">&para;</a></h4>
+<p>Mini-shell dedicata all'agente:
+* Input testuale comandi
+* Output stream formatted
+* Log locale agente
+* Comandi built-in (<code>/help</code>, <code>/agents</code>, <code>/reset</code>)
+* Event bus integration</p>
+<h4 id="3-agentactivitypanel">3. AgentActivityPanel<a class="headerlink" href="#3-agentactivitypanel" title="Permanent link">&para;</a></h4>
+<p>Timeline verticale:
+* Log eventi cronologici
+* Stream updates live
+* Filter per agente
+* Search in logs
+* Export activity</p>
+<h4 id="4-agentllmconfig">4. AgentLLMConfig<a class="headerlink" href="#4-agentllmconfig" title="Permanent link">&para;</a></h4>
+<p>UI completa per:
+* Provider LLM (OpenAI, Anthropic, Local, etc.)
+* Modalità cloud/local
+* Endpoint configuration
+* API key management
+* Auto-start server locale
+* Autodiscovery modelli/binari
+* Model parameters (temperature, max_tokens, top_p)
+* Connection testing</p>
+<h4 id="5-agentembeddingconfig">5. AgentEmbeddingConfig<a class="headerlink" href="#5-agentembeddingconfig" title="Permanent link">&para;</a></h4>
+<p>Configurazione embedding engine:
+* Provider embeddings
+* Modalità local/cloud
+* Autodiscovery modelli
+* Server management (start/stop)
+* Test embedding queries
+* Network parameters
+* Model selection</p>
+<hr />
+<h2 id="2-componenti-principali-del-pannello">2. COMPONENTI PRINCIPALI DEL PANNELLO<a class="headerlink" href="#2-componenti-principali-del-pannello" title="Permanent link">&para;</a></h2>
+<h3 id="21-agent-status-grid-avatar-cards">2.1 AGENT STATUS GRID (Avatar Cards)<a class="headerlink" href="#21-agent-status-grid-avatar-cards" title="Permanent link">&para;</a></h3>
+<p>Ogni card mostra:</p>
+<ul>
+<li><strong>Avatar visuale</strong> dell'agente (icona personalizzata)</li>
+<li><strong>Stato corrente</strong> con color coding:</li>
+<li><code>idle</code> → verde (pronto)</li>
+<li><code>running</code> → blu animato (in esecuzione)</li>
+<li><code>error</code> → rosso (fallimento)</li>
+<li><code>unknown</code> → grigio (non raggiungibile)</li>
+<li><code>starting</code> → giallo (avvio in corso)</li>
+<li><strong>Descrizione ruolo</strong> breve</li>
+<li><strong>Mini-console a comparsa</strong> (hover/click)</li>
+<li><strong>Click sul badge</strong> = run agent immediato</li>
+<li><strong>Progress indicator</strong> per task lunghi</li>
+</ul>
+<h4 id="agenti-definiti-nel-grid">Agenti definiti nel grid<a class="headerlink" href="#agenti-definiti-nel-grid" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Agente</th>
+<th>Ruolo</th>
+<th>Status Possibili</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>planner</strong></td>
+<td>Pianificazione strategica task</td>
+<td>idle, running, error</td>
+</tr>
+<tr>
+<td><strong>codegen</strong></td>
+<td>Generazione codice</td>
+<td>idle, running, error</td>
+</tr>
+<tr>
+<td><strong>historian</strong></td>
+<td>Tracciamento cronologia</td>
+<td>idle, running, error</td>
+</tr>
+<tr>
+<td><strong>knowledge</strong></td>
+<td>Gestione knowledge base</td>
+<td>idle, running, error</td>
+</tr>
+<tr>
+<td><strong>log</strong></td>
+<td>Sistema logging avanzato</td>
+<td>idle, running, error</td>
+</tr>
+<tr>
+<td><strong>scanner</strong></td>
+<td>Scansione file e pattern</td>
+<td>idle, running, error</td>
+</tr>
+<tr>
+<td><strong>refactor</strong></td>
+<td>Refactoring automatico</td>
+<td>idle, running, error</td>
+</tr>
+<tr>
+<td><strong>validator</strong></td>
+<td>Validazione e testing</td>
+<td>idle, running, error</td>
+</tr>
+<tr>
+<td><strong>git</strong></td>
+<td>Operazioni git</td>
+<td>idle, running, error</td>
+</tr>
+</tbody>
+</table>
+<h4 id="interazioni-card">Interazioni Card<a class="headerlink" href="#interazioni-card" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c1">// Click su avatar badge → run agent</span>
+<span class="nx">onClick</span><span class="o">=</span><span class="p">{()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nb">window</span><span class="p">.</span><span class="nx">electronAPI</span><span class="p">.</span><span class="nx">agentRun</span><span class="p">({</span>
+<span class="w">    </span><span class="nx">agent</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;planner&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">input</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">workspace_id</span><span class="o">:</span><span class="w"> </span><span class="nx">currentWorkspace</span>
+<span class="w">  </span><span class="p">});</span>
+<span class="p">}}</span>
+
+<span class="c1">// Hover su card → mostra mini-console</span>
+<span class="nx">onMouseEnter</span><span class="o">=</span><span class="p">{()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">setShowConsole</span><span class="p">(</span><span class="kc">true</span><span class="p">)}</span>
+<span class="nx">onMouseLeave</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">setShowConsole</span><span class="p">(</span><span class="kc">false</span><span class="p">))</span>
+</code></pre></div>
+<h3 id="22-agent-mini-console-agentconsolepanel">2.2 AGENT MINI-CONSOLE (AgentConsolePanel)<a class="headerlink" href="#22-agent-mini-console-agentconsolepanel" title="Permanent link">&para;</a></h3>
+<p>Console dedicata per ogni agente con funzionalità complete.</p>
+<h4 id="funzionalita-base">Funzionalità Base<a class="headerlink" href="#funzionalita-base" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Input testuale</strong> con history (↑↓ keys)</li>
+<li><strong>Output formattato</strong> con syntax highlighting</li>
+<li><strong>Gestione stream</strong> via event bus</li>
+<li><strong>Produce log</strong> per AgentActivityPanel</li>
+<li><strong>Auto-scroll</strong> su nuovi messaggi</li>
+<li><strong>Copy/paste support</strong></li>
+<li><strong>Clear console</strong> command</li>
+</ul>
+<h4 id="comandi-built-in">Comandi Built-in<a class="headerlink" href="#comandi-built-in" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>/help<span class="w">              </span><span class="c1"># Mostra comandi disponibili</span>
+/agents<span class="w">            </span><span class="c1"># Lista agenti attivi</span>
+/reset<span class="w">             </span><span class="c1"># Reset stato console</span>
+/status<span class="w">            </span><span class="c1"># Status agente corrente</span>
+/history<span class="w">           </span><span class="c1"># Mostra cronologia comandi</span>
+/clear<span class="w">             </span><span class="c1"># Pulisci output</span>
+/config<span class="w">            </span><span class="c1"># Mostra config agente</span>
+</code></pre></div>
+<h4 id="event-bus-integration">Event Bus Integration<a class="headerlink" href="#event-bus-integration" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c1">// Emissione comandi</span>
+<span class="nx">Events</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s2">&quot;agent:command&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">target</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;planner&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">command</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;/status&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">timestamp</span><span class="o">:</span><span class="w"> </span><span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">()</span>
+<span class="p">});</span>
+
+<span class="c1">// Ricezione output</span>
+<span class="nx">Events</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;console:output&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nx">msg</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">appendToConsole</span><span class="p">(</span><span class="nx">msg</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">scrollToBottom</span><span class="p">();</span>
+<span class="p">});</span>
+
+<span class="c1">// Stream updates</span>
+<span class="nx">Events</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;agent:stream&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nx">data</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">agent</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nx">currentAgent</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">updateOutput</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">chunk</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div>
+<h4 id="output-formatting">Output Formatting<a class="headerlink" href="#output-formatting" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c1">// Diversi tipi di messaggio</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;info&quot;</span><span class="p">,</span><span class="w">     </span><span class="c1">// Blu</span>
+<span class="w">  </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;success&quot;</span><span class="p">,</span><span class="w">  </span><span class="c1">// Verde</span>
+<span class="w">  </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;error&quot;</span><span class="p">,</span><span class="w">    </span><span class="c1">// Rosso</span>
+<span class="w">  </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;warning&quot;</span><span class="p">,</span><span class="w">  </span><span class="c1">// Giallo</span>
+<span class="w">  </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;system&quot;</span><span class="p">,</span><span class="w">   </span><span class="c1">// Grigio</span>
+<span class="w">  </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;stream&quot;</span><span class="w">    </span><span class="c1">// Neutro, scrolling</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="23-activity-stream-agentactivitypanel">2.3 ACTIVITY STREAM (AgentActivityPanel)<a class="headerlink" href="#23-activity-stream-agentactivitypanel" title="Permanent link">&para;</a></h3>
+<p>Timeline scorrevole con log completo di tutte le attività.</p>
+<h4 id="eventi-tracciati">Eventi Tracciati<a class="headerlink" href="#eventi-tracciati" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c1">// Planner events</span>
+<span class="o">-</span><span class="w"> </span><span class="nx">planner</span><span class="o">:</span><span class="nx">update</span><span class="w">    </span><span class="c1">// Update progressivo</span>
+<span class="o">-</span><span class="w"> </span><span class="nx">planner</span><span class="o">:</span><span class="nx">done</span><span class="w">      </span><span class="c1">// Completamento task</span>
+<span class="o">-</span><span class="w"> </span><span class="nx">planner</span><span class="o">:</span><span class="nx">error</span><span class="w">     </span><span class="c1">// Errore pianificazione</span>
+
+<span class="c1">// Analyzer events</span>
+<span class="o">-</span><span class="w"> </span><span class="nx">analyzer</span><span class="o">:</span><span class="nx">update</span><span class="w">   </span><span class="c1">// Analisi in corso</span>
+<span class="o">-</span><span class="w"> </span><span class="nx">analyzer</span><span class="o">:</span><span class="nx">done</span><span class="w">     </span><span class="c1">// Analisi completata</span>
+<span class="o">-</span><span class="w"> </span><span class="nx">analyzer</span><span class="o">:</span><span class="nx">error</span><span class="w">    </span><span class="c1">// Errore analisi</span>
+
+<span class="c1">// Historian events</span>
+<span class="o">-</span><span class="w"> </span><span class="nx">historian</span><span class="o">:</span><span class="nx">commit</span><span class="w">  </span><span class="c1">// Nuovo commit tracciato</span>
+<span class="o">-</span><span class="w"> </span><span class="nx">historian</span><span class="o">:</span><span class="nx">sync</span><span class="w">    </span><span class="c1">// Sync cronologia</span>
+
+<span class="c1">// Agent run results</span>
+<span class="o">-</span><span class="w"> </span><span class="nx">agent</span><span class="o">:</span><span class="nx">started</span><span class="w">     </span><span class="c1">// Agent avviato</span>
+<span class="o">-</span><span class="w"> </span><span class="nx">agent</span><span class="o">:</span><span class="nx">completed</span><span class="w">   </span><span class="c1">// Agent terminato</span>
+<span class="o">-</span><span class="w"> </span><span class="nx">agent</span><span class="o">:</span><span class="nx">failed</span><span class="w">      </span><span class="c1">// Agent fallito</span>
+
+<span class="c1">// Console messages</span>
+<span class="o">-</span><span class="w"> </span><span class="nx">console</span><span class="o">:</span><span class="nx">input</span><span class="w">     </span><span class="c1">// Input utente</span>
+<span class="o">-</span><span class="w"> </span><span class="nx">console</span><span class="o">:</span><span class="nx">output</span><span class="w">    </span><span class="c1">// Output agente</span>
+</code></pre></div>
+<h4 id="aggiornamento-stream">Aggiornamento Stream<a class="headerlink" href="#aggiornamento-stream" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c1">// IPC listeners per streaming</span>
+<span class="nb">window</span><span class="p">.</span><span class="nx">electronAPI</span><span class="p">.</span><span class="nx">onPlannerUpdate</span><span class="p">((</span><span class="nx">data</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">appendActivity</span><span class="p">({</span>
+<span class="w">    </span><span class="nx">timestamp</span><span class="o">:</span><span class="w"> </span><span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">(),</span>
+<span class="w">    </span><span class="nx">agent</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;planner&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;update&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">message</span><span class="o">:</span><span class="w"> </span><span class="nx">data</span><span class="p">.</span><span class="nx">message</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">progress</span><span class="o">:</span><span class="w"> </span><span class="nx">data</span><span class="p">.</span><span class="nx">progress</span>
+<span class="w">  </span><span class="p">});</span>
+<span class="p">});</span>
+
+<span class="nb">window</span><span class="p">.</span><span class="nx">electronAPI</span><span class="p">.</span><span class="nx">onPlannerDone</span><span class="p">((</span><span class="nx">result</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">appendActivity</span><span class="p">({</span>
+<span class="w">    </span><span class="nx">timestamp</span><span class="o">:</span><span class="w"> </span><span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">(),</span>
+<span class="w">    </span><span class="nx">agent</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;planner&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;done&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">message</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Task completed&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">result</span><span class="o">:</span><span class="w"> </span><span class="nx">result</span>
+<span class="w">  </span><span class="p">});</span>
+<span class="p">});</span>
+
+<span class="nb">window</span><span class="p">.</span><span class="nx">electronAPI</span><span class="p">.</span><span class="nx">onPlannerError</span><span class="p">((</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">appendActivity</span><span class="p">({</span>
+<span class="w">    </span><span class="nx">timestamp</span><span class="o">:</span><span class="w"> </span><span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">(),</span>
+<span class="w">    </span><span class="nx">agent</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;planner&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;error&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">message</span><span class="o">:</span><span class="w"> </span><span class="nx">error</span><span class="p">.</span><span class="nx">message</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">stack</span><span class="o">:</span><span class="w"> </span><span class="nx">error</span><span class="p">.</span><span class="nx">stack</span>
+<span class="w">  </span><span class="p">});</span>
+<span class="p">});</span>
+
+<span class="nb">window</span><span class="p">.</span><span class="nx">electronAPI</span><span class="p">.</span><span class="nx">onAnalyzerUpdate</span><span class="p">((</span><span class="nx">data</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">appendActivity</span><span class="p">({</span>
+<span class="w">    </span><span class="nx">timestamp</span><span class="o">:</span><span class="w"> </span><span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">(),</span>
+<span class="w">    </span><span class="nx">agent</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;analyzer&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;update&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">message</span><span class="o">:</span><span class="w"> </span><span class="nx">data</span><span class="p">.</span><span class="nx">message</span>
+<span class="w">  </span><span class="p">});</span>
+<span class="p">});</span>
+</code></pre></div>
+<h4 id="ui-features">UI Features<a class="headerlink" href="#ui-features" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Auto-scroll</strong> su nuovi eventi</li>
+<li><strong>Filter by agent</strong> (dropdown)</li>
+<li><strong>Filter by type</strong> (checkboxes: info/error/warning)</li>
+<li><strong>Search in logs</strong> (full-text)</li>
+<li><strong>Export logs</strong> (JSON/CSV)</li>
+<li><strong>Clear all</strong> button</li>
+<li><strong>Timestamp formatting</strong> (relativo o assoluto)</li>
+<li><strong>Color coding</strong> per tipo evento</li>
+</ul>
+<h3 id="24-llm-config-agentllmconfig">2.4 LLM CONFIG (AgentLLMConfig)<a class="headerlink" href="#24-llm-config-agentllmconfig" title="Permanent link">&para;</a></h3>
+<p>UI completa per configurare il Large Language Model backend.</p>
+<h4 id="sezioni-configurazione">Sezioni Configurazione<a class="headerlink" href="#sezioni-configurazione" title="Permanent link">&para;</a></h4>
+<h5 id="1-provider-selection">1. Provider Selection<a class="headerlink" href="#1-provider-selection" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><span class="nx">providers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">  </span><span class="s2">&quot;openai&quot;</span><span class="p">,</span><span class="w">      </span><span class="c1">// OpenAI API</span>
+<span class="w">  </span><span class="s2">&quot;anthropic&quot;</span><span class="p">,</span><span class="w">   </span><span class="c1">// Claude API</span>
+<span class="w">  </span><span class="s2">&quot;local&quot;</span><span class="p">,</span><span class="w">       </span><span class="c1">// Server locale</span>
+<span class="w">  </span><span class="s2">&quot;ollama&quot;</span><span class="p">,</span><span class="w">      </span><span class="c1">// Ollama</span>
+<span class="w">  </span><span class="s2">&quot;llamacpp&quot;</span><span class="p">,</span><span class="w">    </span><span class="c1">// llama.cpp</span>
+<span class="w">  </span><span class="s2">&quot;custom&quot;</span><span class="w">       </span><span class="c1">// Endpoint custom</span>
+<span class="p">]</span>
+</code></pre></div>
+<h5 id="2-modalita-operativa">2. Modalità Operativa<a class="headerlink" href="#2-modalita-operativa" title="Permanent link">&para;</a></h5>
+<ul>
+<li><strong>Cloud Mode</strong></li>
+<li>API Key input (encrypted)</li>
+<li>Endpoint URL</li>
+<li>Organization ID (optional)</li>
+<li>Rate limiting config</li>
+<li>
+<p>Retry policy</p>
+</li>
+<li>
+<p><strong>Local Mode</strong></p>
+</li>
+<li>Binary path</li>
+<li>Model path</li>
+<li>Port configuration</li>
+<li>Memory allocation</li>
+<li>Thread count</li>
+<li>GPU layers (optional)</li>
+</ul>
+<h5 id="3-model-parameters">3. Model Parameters<a class="headerlink" href="#3-model-parameters" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nx">temperature</span><span class="o">:</span><span class="w"> </span><span class="mf">0.7</span><span class="p">,</span><span class="w">        </span><span class="c1">// 0.0 - 2.0</span>
+<span class="w">  </span><span class="nx">max_tokens</span><span class="o">:</span><span class="w"> </span><span class="mf">2048</span><span class="p">,</span><span class="w">        </span><span class="c1">// 1 - 32768</span>
+<span class="w">  </span><span class="nx">top_p</span><span class="o">:</span><span class="w"> </span><span class="mf">0.9</span><span class="p">,</span><span class="w">              </span><span class="c1">// 0.0 - 1.0</span>
+<span class="w">  </span><span class="nx">frequency_penalty</span><span class="o">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">  </span><span class="c1">// -2.0 - 2.0</span>
+<span class="w">  </span><span class="nx">presence_penalty</span><span class="o">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">   </span><span class="c1">// -2.0 - 2.0</span>
+<span class="w">  </span><span class="nx">stop_sequences</span><span class="o">:</span><span class="w"> </span><span class="p">[]</span><span class="w">       </span><span class="c1">// Array di stringhe</span>
+<span class="p">}</span>
+</code></pre></div>
+<h5 id="4-autodiscovery">4. Autodiscovery<a class="headerlink" href="#4-autodiscovery" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><span class="c1">// Scansione automatica modelli locali</span>
+<span class="nb">window</span><span class="p">.</span><span class="nx">electronAPI</span><span class="p">.</span><span class="nx">llmLocalDiscover</span><span class="p">()</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">models</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// models = [{name, path, size, type}, ...]</span>
+<span class="w">    </span><span class="nx">populateModelDropdown</span><span class="p">(</span><span class="nx">models</span><span class="p">);</span>
+<span class="w">  </span><span class="p">});</span>
+
+<span class="c1">// Scansione binari disponibili</span>
+<span class="nb">window</span><span class="p">.</span><span class="nx">electronAPI</span><span class="p">.</span><span class="nx">llmLocalDiscoverBinaries</span><span class="p">()</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">binaries</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// binaries = [{name, path, version}, ...]</span>
+<span class="w">    </span><span class="nx">populateBinaryDropdown</span><span class="p">(</span><span class="nx">binaries</span><span class="p">);</span>
+<span class="w">  </span><span class="p">});</span>
+</code></pre></div>
+<h5 id="5-server-management">5. Server Management<a class="headerlink" href="#5-server-management" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><span class="c1">// Start server locale</span>
+<span class="k">await</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">electronAPI</span><span class="p">.</span><span class="nx">llmLocalStart</span><span class="p">({</span>
+<span class="w">  </span><span class="nx">binary</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;/path/to/llama-server&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">model</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;/path/to/model.gguf&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">port</span><span class="o">:</span><span class="w"> </span><span class="mf">8080</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">threads</span><span class="o">:</span><span class="w"> </span><span class="mf">8</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">ctx_size</span><span class="o">:</span><span class="w"> </span><span class="mf">4096</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">gpu_layers</span><span class="o">:</span><span class="w"> </span><span class="mf">35</span>
+<span class="p">});</span>
+
+<span class="c1">// Stop server locale</span>
+<span class="k">await</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">electronAPI</span><span class="p">.</span><span class="nx">llmLocalStop</span><span class="p">();</span>
+
+<span class="c1">// Check status</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">electronAPI</span><span class="p">.</span><span class="nx">llmLocalStatus</span><span class="p">();</span>
+<span class="c1">// status = {running: true, port: 8080, model: &quot;...&quot;}</span>
+</code></pre></div>
+<h5 id="6-connection-testing">6. Connection Testing<a class="headerlink" href="#6-connection-testing" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><span class="c1">// Test connessione</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">testResult</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">electronAPI</span><span class="p">.</span><span class="nx">llmConfigTest</span><span class="p">({</span>
+<span class="w">  </span><span class="nx">provider</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;local&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">endpoint</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;http://localhost:8080/v1&quot;</span>
+<span class="p">});</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">testResult</span><span class="p">.</span><span class="nx">success</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">showSuccess</span><span class="p">(</span><span class="s2">&quot;Connection OK&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">displayModelInfo</span><span class="p">(</span><span class="nx">testResult</span><span class="p">.</span><span class="nx">modelInfo</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">showError</span><span class="p">(</span><span class="nx">testResult</span><span class="p">.</span><span class="nx">error</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="persistenza-config">Persistenza Config<a class="headerlink" href="#persistenza-config" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c1">// Get current config</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">electronAPI</span><span class="p">.</span><span class="nx">llmConfigGet</span><span class="p">();</span>
+
+<span class="c1">// Save config</span>
+<span class="k">await</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">electronAPI</span><span class="p">.</span><span class="nx">llmConfigSet</span><span class="p">({</span>
+<span class="w">  </span><span class="nx">provider</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;local&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">mode</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;local&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">model</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;llama-3-8b&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">endpoint</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;http://localhost:8080/v1&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">parameters</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">temperature</span><span class="o">:</span><span class="w"> </span><span class="mf">0.7</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">max_tokens</span><span class="o">:</span><span class="w"> </span><span class="mf">2048</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div>
+<h3 id="25-embedding-config-agentembeddingconfig">2.5 EMBEDDING CONFIG (AgentEmbeddingConfig)<a class="headerlink" href="#25-embedding-config-agentembeddingconfig" title="Permanent link">&para;</a></h3>
+<p>Configurazione parallela per il motore di embedding.</p>
+<h4 id="provider-embeddings">Provider Embeddings<a class="headerlink" href="#provider-embeddings" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="nx">embeddingProviders</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">  </span><span class="s2">&quot;openai&quot;</span><span class="p">,</span><span class="w">           </span><span class="c1">// text-embedding-3-*</span>
+<span class="w">  </span><span class="s2">&quot;sentence-transformers&quot;</span><span class="p">,</span><span class="w">  </span><span class="c1">// Local</span>
+<span class="w">  </span><span class="s2">&quot;ollama&quot;</span><span class="p">,</span><span class="w">           </span><span class="c1">// ollama embed</span>
+<span class="w">  </span><span class="s2">&quot;llamacpp&quot;</span><span class="p">,</span><span class="w">         </span><span class="c1">// llama.cpp embeddings</span>
+<span class="w">  </span><span class="s2">&quot;custom&quot;</span><span class="w">            </span><span class="c1">// Endpoint custom</span>
+<span class="p">]</span>
+</code></pre></div>
+<h4 id="configurazione-local-embedding">Configurazione Local Embedding<a class="headerlink" href="#configurazione-local-embedding" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nx">provider</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;sentence-transformers&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">model</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;all-MiniLM-L6-v2&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">model_path</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;/path/to/model&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">dimension</span><span class="o">:</span><span class="w"> </span><span class="mf">384</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">normalize</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">batch_size</span><span class="o">:</span><span class="w"> </span><span class="mf">32</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">device</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;cuda&quot;</span><span class="w">  </span><span class="c1">// cpu, cuda, mps</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="autodiscovery-modelli">Autodiscovery Modelli<a class="headerlink" href="#autodiscovery-modelli" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c1">// Scansione modelli embedding locali</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">models</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">electronAPI</span><span class="p">.</span><span class="nx">embeddingLocalDiscover</span><span class="p">();</span>
+<span class="c1">// models = [</span>
+<span class="c1">//   {name: &quot;all-MiniLM-L6-v2&quot;, dimension: 384, size: &quot;80MB&quot;},</span>
+<span class="c1">//   {name: &quot;paraphrase-multilingual&quot;, dimension: 768, size: &quot;420MB&quot;}</span>
+<span class="c1">// ]</span>
+</code></pre></div>
+<h4 id="server-management">Server Management<a class="headerlink" href="#server-management" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c1">// Start embedding server</span>
+<span class="k">await</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">electronAPI</span><span class="p">.</span><span class="nx">embeddingLocalStart</span><span class="p">({</span>
+<span class="w">  </span><span class="nx">model</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;all-MiniLM-L6-v2&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">port</span><span class="o">:</span><span class="w"> </span><span class="mf">8081</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">device</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;cuda&quot;</span>
+<span class="p">});</span>
+
+<span class="c1">// Stop embedding server</span>
+<span class="k">await</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">electronAPI</span><span class="p">.</span><span class="nx">embeddingLocalStop</span><span class="p">();</span>
+
+<span class="c1">// Status check</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">electronAPI</span><span class="p">.</span><span class="nx">embeddingLocalStatus</span><span class="p">();</span>
+</code></pre></div>
+<h4 id="test-embedding">Test Embedding<a class="headerlink" href="#test-embedding" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c1">// Test embedding query</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">testResult</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">electronAPI</span><span class="p">.</span><span class="nx">embeddingConfigTest</span><span class="p">({</span>
+<span class="w">  </span><span class="nx">text</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;This is a test sentence&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">provider</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;local&quot;</span>
+<span class="p">});</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">testResult</span><span class="p">.</span><span class="nx">success</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Embedding dimension:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">testResult</span><span class="p">.</span><span class="nx">embedding</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;First values:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">testResult</span><span class="p">.</span><span class="nx">embedding</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">));</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="3-parametri-di-configurazione-del-panel">3. PARAMETRI DI CONFIGURAZIONE DEL PANEL<a class="headerlink" href="#3-parametri-di-configurazione-del-panel" title="Permanent link">&para;</a></h2>
+<h3 id="31-detection-agenti-attivi">3.1 Detection Agenti Attivi<a class="headerlink" href="#31-detection-agenti-attivi" title="Permanent link">&para;</a></h3>
+<p>Il pannello deve interrogare il backend per lo stato agenti.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Lista agenti disponibili</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">agents</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">electronAPI</span><span class="p">.</span><span class="nx">agentsList</span><span class="p">();</span>
+<span class="c1">// agents = [&quot;planner&quot;, &quot;analyzer&quot;, &quot;scanner&quot;, ...]</span>
+
+<span class="c1">// Status singolo agente</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">electronAPI</span><span class="p">.</span><span class="nx">agentStatus</span><span class="p">({</span>
+<span class="w">  </span><span class="nx">agent</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;planner&quot;</span>
+<span class="p">});</span>
+<span class="c1">// status = {</span>
+<span class="c1">//   agent: &quot;planner&quot;,</span>
+<span class="c1">//   status: &quot;idle&quot;,</span>
+<span class="c1">//   lastRun: timestamp,</span>
+<span class="c1">//   runCount: 42,</span>
+<span class="c1">//   errorCount: 1</span>
+<span class="c1">// }</span>
+
+<span class="c1">// Batch status check</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">allStatus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nb">Promise</span><span class="p">.</span><span class="nx">all</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">agents</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">agent</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span>
+<span class="w">    </span><span class="nb">window</span><span class="p">.</span><span class="nx">electronAPI</span><span class="p">.</span><span class="nx">agentStatus</span><span class="p">({</span><span class="nx">agent</span><span class="p">})</span>
+<span class="w">  </span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div>
+<h3 id="32-configurazioni-llm-e-embedding">3.2 Configurazioni LLM e Embedding<a class="headerlink" href="#32-configurazioni-llm-e-embedding" title="Permanent link">&para;</a></h3>
+<p>Persistenza backend tramite IPC dedicati.</p>
+<h4 id="llm-config-ipc">LLM Config IPC<a class="headerlink" href="#llm-config-ipc" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c1">// Get config</span>
+<span class="nx">llmConfigGet</span><span class="p">()</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="p">{</span><span class="nx">provider</span><span class="p">,</span><span class="w"> </span><span class="nx">mode</span><span class="p">,</span><span class="w"> </span><span class="nx">model</span><span class="p">,</span><span class="w"> </span><span class="nx">parameters</span><span class="p">,</span><span class="w"> </span><span class="p">...}</span>
+
+<span class="c1">// Set config</span>
+<span class="nx">llmConfigSet</span><span class="p">(</span><span class="nx">config</span><span class="p">)</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="p">{</span><span class="nx">success</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">}</span>
+
+<span class="c1">// Local discovery</span>
+<span class="nx">llmLocalDiscover</span><span class="p">()</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="p">[{</span><span class="nx">model</span><span class="p">,</span><span class="w"> </span><span class="nx">path</span><span class="p">,</span><span class="w"> </span><span class="nx">size</span><span class="p">},</span><span class="w"> </span><span class="p">...]</span>
+<span class="nx">llmLocalDiscoverBinaries</span><span class="p">()</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="p">[{</span><span class="nx">name</span><span class="p">,</span><span class="w"> </span><span class="nx">path</span><span class="p">,</span><span class="w"> </span><span class="nx">version</span><span class="p">},</span><span class="w"> </span><span class="p">...]</span>
+
+<span class="c1">// Local server management</span>
+<span class="nx">llmLocalStart</span><span class="p">(</span><span class="nx">options</span><span class="p">)</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="p">{</span><span class="nx">success</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="nx">port</span><span class="p">}</span>
+<span class="nx">llmLocalStop</span><span class="p">()</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="p">{</span><span class="nx">success</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">}</span>
+<span class="nx">llmLocalStatus</span><span class="p">()</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="p">{</span><span class="nx">running</span><span class="p">,</span><span class="w"> </span><span class="nx">port</span><span class="p">,</span><span class="w"> </span><span class="nx">model</span><span class="p">}</span>
+
+<span class="c1">// Testing</span>
+<span class="nx">llmConfigTest</span><span class="p">(</span><span class="nx">config</span><span class="p">)</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="p">{</span><span class="nx">success</span><span class="p">,</span><span class="w"> </span><span class="nx">modelInfo</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">}</span>
+</code></pre></div>
+<h4 id="embedding-config-ipc">Embedding Config IPC<a class="headerlink" href="#embedding-config-ipc" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c1">// Get config</span>
+<span class="nx">embeddingConfigGet</span><span class="p">()</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="p">{</span><span class="nx">provider</span><span class="p">,</span><span class="w"> </span><span class="nx">model</span><span class="p">,</span><span class="w"> </span><span class="nx">dimension</span><span class="p">,</span><span class="w"> </span><span class="p">...}</span>
+
+<span class="c1">// Set config</span>
+<span class="nx">embeddingConfigSet</span><span class="p">(</span><span class="nx">config</span><span class="p">)</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="p">{</span><span class="nx">success</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">}</span>
+
+<span class="c1">// Local discovery</span>
+<span class="nx">embeddingLocalDiscover</span><span class="p">()</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="p">[{</span><span class="nx">model</span><span class="p">,</span><span class="w"> </span><span class="nx">dimension</span><span class="p">,</span><span class="w"> </span><span class="nx">size</span><span class="p">},</span><span class="w"> </span><span class="p">...]</span>
+
+<span class="c1">// Server management</span>
+<span class="nx">embeddingLocalStart</span><span class="p">(</span><span class="nx">options</span><span class="p">)</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="p">{</span><span class="nx">success</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="nx">port</span><span class="p">}</span>
+<span class="nx">embeddingLocalStop</span><span class="p">()</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="p">{</span><span class="nx">success</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">}</span>
+<span class="nx">embeddingLocalStatus</span><span class="p">()</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="p">{</span><span class="nx">running</span><span class="p">,</span><span class="w"> </span><span class="nx">port</span><span class="p">,</span><span class="w"> </span><span class="nx">model</span><span class="p">}</span>
+
+<span class="c1">// Testing</span>
+<span class="nx">embeddingConfigTest</span><span class="p">({</span><span class="nx">text</span><span class="p">})</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="p">{</span><span class="nx">success</span><span class="p">,</span><span class="w"> </span><span class="nx">embedding</span><span class="p">,</span><span class="w"> </span><span class="nx">dimension</span><span class="p">}</span>
+</code></pre></div>
+<h3 id="33-stream-di-aggiornamento-agenti">3.3 Stream di Aggiornamento Agenti<a class="headerlink" href="#33-stream-di-aggiornamento-agenti" title="Permanent link">&para;</a></h3>
+<p>Eventi real-time dal backend verso UI.</p>
+<h4 id="event-listeners">Event Listeners<a class="headerlink" href="#event-listeners" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c1">// Planner events</span>
+<span class="nb">window</span><span class="p">.</span><span class="nx">electronAPI</span><span class="p">.</span><span class="nx">onPlannerUpdate</span><span class="p">((</span><span class="nx">data</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// data = {message, progress, step, total}</span>
+<span class="w">  </span><span class="nx">updateActivityLog</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">updateAgentCard</span><span class="p">(</span><span class="s2">&quot;planner&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;running&quot;</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="nb">window</span><span class="p">.</span><span class="nx">electronAPI</span><span class="p">.</span><span class="nx">onPlannerDone</span><span class="p">((</span><span class="nx">result</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// result = {plan, tasks, duration}</span>
+<span class="w">  </span><span class="nx">updateActivityLog</span><span class="p">({</span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;done&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">result</span><span class="p">});</span>
+<span class="w">  </span><span class="nx">updateAgentCard</span><span class="p">(</span><span class="s2">&quot;planner&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;idle&quot;</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="nb">window</span><span class="p">.</span><span class="nx">electronAPI</span><span class="p">.</span><span class="nx">onPlannerError</span><span class="p">((</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// error = {message, stack, code}</span>
+<span class="w">  </span><span class="nx">updateActivityLog</span><span class="p">({</span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;error&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">});</span>
+<span class="w">  </span><span class="nx">updateAgentCard</span><span class="p">(</span><span class="s2">&quot;planner&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;error&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">showNotification</span><span class="p">(</span><span class="s2">&quot;Planner Error&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">.</span><span class="nx">message</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="c1">// Analyzer events</span>
+<span class="nb">window</span><span class="p">.</span><span class="nx">electronAPI</span><span class="p">.</span><span class="nx">onAnalyzerUpdate</span><span class="p">((</span><span class="nx">data</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// data = {file, progress, analysis}</span>
+<span class="w">  </span><span class="nx">updateActivityLog</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">updateAgentCard</span><span class="p">(</span><span class="s2">&quot;analyzer&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;running&quot;</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="c1">// Generic agent events</span>
+<span class="nb">window</span><span class="p">.</span><span class="nx">electronAPI</span><span class="p">.</span><span class="nx">onAgentUpdate</span><span class="p">((</span><span class="nx">data</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// data = {agent, type, message, ...}</span>
+<span class="w">  </span><span class="nx">updateActivityLog</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">updateAgentCard</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">agent</span><span class="p">,</span><span class="w"> </span><span class="nx">data</span><span class="p">.</span><span class="nx">status</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
+<h3 id="34-run-all-agenti">3.4 Run-All Agenti<a class="headerlink" href="#34-run-all-agenti" title="Permanent link">&para;</a></h3>
+<p>Esecuzione batch di tutti gli agenti in sequenza o parallelo.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Run all agents in sequence</span>
+<span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">runAllAgents</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">agents</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">electronAPI</span><span class="p">.</span><span class="nx">agentsList</span><span class="p">();</span>
+
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">const</span><span class="w"> </span><span class="nx">agent</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nx">agents</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">electronAPI</span><span class="p">.</span><span class="nx">agentRun</span><span class="p">({</span>
+<span class="w">        </span><span class="nx">agent</span><span class="o">:</span><span class="w"> </span><span class="nx">agent</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">input</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">workspace_id</span><span class="o">:</span><span class="w"> </span><span class="nx">currentWorkspace</span>
+<span class="w">      </span><span class="p">});</span>
+
+<span class="w">      </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">agent</span><span class="si">}</span><span class="sb"> completed:`</span><span class="p">,</span><span class="w"> </span><span class="nx">result</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">agent</span><span class="si">}</span><span class="sb"> failed:`</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">);</span>
+<span class="w">      </span><span class="c1">// Continue with next agent</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Run all agents in parallel</span>
+<span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">runAllAgentsParallel</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">agents</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">electronAPI</span><span class="p">.</span><span class="nx">agentsList</span><span class="p">();</span>
+
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">results</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nb">Promise</span><span class="p">.</span><span class="nx">allSettled</span><span class="p">(</span>
+<span class="w">    </span><span class="nx">agents</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">agent</span><span class="w"> </span><span class="p">=&gt;</span>
+<span class="w">      </span><span class="nb">window</span><span class="p">.</span><span class="nx">electronAPI</span><span class="p">.</span><span class="nx">agentRun</span><span class="p">({</span>
+<span class="w">        </span><span class="nx">agent</span><span class="o">:</span><span class="w"> </span><span class="nx">agent</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">input</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">workspace_id</span><span class="o">:</span><span class="w"> </span><span class="nx">currentWorkspace</span>
+<span class="w">      </span><span class="p">})</span>
+<span class="w">    </span><span class="p">)</span>
+<span class="w">  </span><span class="p">);</span>
+
+<span class="w">  </span><span class="nx">results</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">result</span><span class="p">,</span><span class="w"> </span><span class="nx">index</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">result</span><span class="p">.</span><span class="nx">status</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">&quot;fulfilled&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">agents</span><span class="p">[</span><span class="nx">index</span><span class="p">]</span><span class="si">}</span><span class="sb"> OK:`</span><span class="p">,</span><span class="w"> </span><span class="nx">result</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">agents</span><span class="p">[</span><span class="nx">index</span><span class="p">]</span><span class="si">}</span><span class="sb"> FAIL:`</span><span class="p">,</span><span class="w"> </span><span class="nx">result</span><span class="p">.</span><span class="nx">reason</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">});</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="4-interazioni-backend-ws-ipc">4. INTERAZIONI BACKEND (WS / IPC)<a class="headerlink" href="#4-interazioni-backend-ws-ipc" title="Permanent link">&para;</a></h2>
+<h3 id="41-agent-run">4.1 Agent Run<a class="headerlink" href="#41-agent-run" title="Permanent link">&para;</a></h3>
+<p>Esecuzione singolo agente con input opzionale.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// IPC call</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">electronAPI</span><span class="p">.</span><span class="nx">agentRun</span><span class="p">({</span>
+<span class="w">  </span><span class="nx">agent</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;planner&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">input</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Create a REST API for user management&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">workspace_id</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;workspace_123&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">options</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">timeout</span><span class="o">:</span><span class="w"> </span><span class="mf">300000</span><span class="p">,</span><span class="w">  </span><span class="c1">// 5 minuti</span>
+<span class="w">    </span><span class="nx">stream</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">     </span><span class="c1">// Stream updates</span>
+<span class="w">    </span><span class="nx">context</span><span class="o">:</span><span class="w"> </span><span class="p">{}</span><span class="w">       </span><span class="c1">// Context addizionale</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">});</span>
+
+<span class="c1">// Result structure</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">success</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">agent</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;planner&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">output</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">plan</span><span class="o">:</span><span class="w"> </span><span class="p">[...],</span>
+<span class="w">    </span><span class="nx">tasks</span><span class="o">:</span><span class="w"> </span><span class="p">[...],</span>
+<span class="w">    </span><span class="nx">duration</span><span class="o">:</span><span class="w"> </span><span class="mf">12500</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nx">timestamp</span><span class="o">:</span><span class="w"> </span><span class="mf">1234567890</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">metadata</span><span class="o">:</span><span class="w"> </span><span class="p">{}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="42-agent-status">4.2 Agent Status<a class="headerlink" href="#42-agent-status" title="Permanent link">&para;</a></h3>
+<p>Interrogazione stato corrente agente.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// IPC call</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">electronAPI</span><span class="p">.</span><span class="nx">agentStatus</span><span class="p">({</span>
+<span class="w">  </span><span class="nx">agent</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;planner&quot;</span>
+<span class="p">});</span>
+
+<span class="c1">// Status structure</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">agent</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;planner&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">status</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;idle&quot;</span><span class="p">,</span><span class="w">        </span><span class="c1">// idle, running, error, unknown</span>
+<span class="w">  </span><span class="nx">lastRun</span><span class="o">:</span><span class="w"> </span><span class="mf">1234567890</span><span class="p">,</span><span class="w">   </span><span class="c1">// timestamp</span>
+<span class="w">  </span><span class="nx">lastResult</span><span class="o">:</span><span class="w"> </span><span class="p">{...},</span><span class="w">     </span><span class="c1">// ultimo risultato</span>
+<span class="w">  </span><span class="nx">runCount</span><span class="o">:</span><span class="w"> </span><span class="mf">42</span><span class="p">,</span><span class="w">          </span><span class="c1">// esecuzioni totali</span>
+<span class="w">  </span><span class="nx">errorCount</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w">         </span><span class="c1">// errori totali</span>
+<span class="w">  </span><span class="nx">averageDuration</span><span class="o">:</span><span class="w"> </span><span class="mf">8500</span><span class="p">,</span><span class="w"> </span><span class="c1">// ms medio</span>
+<span class="w">  </span><span class="nx">currentTask</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="w">      </span><span class="c1">// task in corso se running</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="43-llm-config-ipc">4.3 LLM Config IPC<a class="headerlink" href="#43-llm-config-ipc" title="Permanent link">&para;</a></h3>
+<p>Gestione completa configurazione LLM.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Get current config</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">electronAPI</span><span class="p">.</span><span class="nx">llmConfigGet</span><span class="p">();</span>
+<span class="c1">// Returns:</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">provider</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;local&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">mode</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;local&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">model</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;llama-3-8b&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">modelPath</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;/models/llama-3-8b.gguf&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">endpoint</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;http://localhost:8080/v1&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">parameters</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">temperature</span><span class="o">:</span><span class="w"> </span><span class="mf">0.7</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">max_tokens</span><span class="o">:</span><span class="w"> </span><span class="mf">2048</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">top_p</span><span class="o">:</span><span class="w"> </span><span class="mf">0.9</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nx">serverConfig</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">port</span><span class="o">:</span><span class="w"> </span><span class="mf">8080</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">threads</span><span class="o">:</span><span class="w"> </span><span class="mf">8</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">ctx_size</span><span class="o">:</span><span class="w"> </span><span class="mf">4096</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">gpu_layers</span><span class="o">:</span><span class="w"> </span><span class="mf">35</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Set new config</span>
+<span class="k">await</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">electronAPI</span><span class="p">.</span><span class="nx">llmConfigSet</span><span class="p">({</span>
+<span class="w">  </span><span class="nx">provider</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;anthropic&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">mode</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;cloud&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">apiKey</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;sk-ant-...&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">model</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;claude-3-opus-20240229&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">parameters</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">temperature</span><span class="o">:</span><span class="w"> </span><span class="mf">0.7</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">max_tokens</span><span class="o">:</span><span class="w"> </span><span class="mf">4096</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">});</span>
+
+<span class="c1">// Discover local models</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">models</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">electronAPI</span><span class="p">.</span><span class="nx">llmLocalDiscover</span><span class="p">();</span>
+<span class="c1">// Returns:</span>
+<span class="p">[</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;llama-3-8b&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;/models/llama-3-8b.gguf&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">size</span><span class="o">:</span><span class="w"> </span><span class="mf">8500000000</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;gguf&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">quantization</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Q4_K_M&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="p">...</span>
+<span class="p">]</span>
+
+<span class="c1">// Discover binaries</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">binaries</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">electronAPI</span><span class="p">.</span><span class="nx">llmLocalDiscoverBinaries</span><span class="p">();</span>
+<span class="c1">// Returns:</span>
+<span class="p">[</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;llama-server&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;/usr/local/bin/llama-server&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">version</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;b1234&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="p">...</span>
+<span class="p">]</span>
+
+<span class="c1">// Start local server</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">started</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">electronAPI</span><span class="p">.</span><span class="nx">llmLocalStart</span><span class="p">({</span>
+<span class="w">  </span><span class="nx">binary</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;/usr/local/bin/llama-server&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">model</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;/models/llama-3-8b.gguf&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">port</span><span class="o">:</span><span class="w"> </span><span class="mf">8080</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">threads</span><span class="o">:</span><span class="w"> </span><span class="mf">8</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">ctx_size</span><span class="o">:</span><span class="w"> </span><span class="mf">4096</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">gpu_layers</span><span class="o">:</span><span class="w"> </span><span class="mf">35</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">batch_size</span><span class="o">:</span><span class="w"> </span><span class="mf">512</span>
+<span class="p">});</span>
+<span class="c1">// Returns: {success: true, port: 8080, pid: 12345}</span>
+
+<span class="c1">// Stop local server</span>
+<span class="k">await</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">electronAPI</span><span class="p">.</span><span class="nx">llmLocalStop</span><span class="p">();</span>
+<span class="c1">// Returns: {success: true}</span>
+
+<span class="c1">// Check server status</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">serverStatus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">electronAPI</span><span class="p">.</span><span class="nx">llmLocalStatus</span><span class="p">();</span>
+<span class="c1">// Returns:</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">running</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">port</span><span class="o">:</span><span class="w"> </span><span class="mf">8080</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">pid</span><span class="o">:</span><span class="w"> </span><span class="mf">12345</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">model</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;llama-3-8b&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">uptime</span><span class="o">:</span><span class="w"> </span><span class="mf">3600</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">requests</span><span class="o">:</span><span class="w"> </span><span class="mf">125</span>
+<span class="p">}</span>
+
+<span class="c1">// Test connection</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">testResult</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">electronAPI</span><span class="p">.</span><span class="nx">llmConfigTest</span><span class="p">({</span>
+<span class="w">  </span><span class="nx">provider</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;local&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">endpoint</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;http://localhost:8080/v1&quot;</span>
+<span class="p">});</span>
+<span class="c1">// Returns:</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">success</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">latency</span><span class="o">:</span><span class="w"> </span><span class="mf">45</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">modelInfo</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;llama-3-8b&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">context_length</span><span class="o">:</span><span class="w"> </span><span class="mf">8192</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="44-embedding-config-ipc">4.4 Embedding Config IPC<a class="headerlink" href="#44-embedding-config-ipc" title="Permanent link">&para;</a></h3>
+<p>Gestione configurazione embedding engine.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Get current config</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">electronAPI</span><span class="p">.</span><span class="nx">embeddingConfigGet</span><span class="p">();</span>
+<span class="c1">// Returns:</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">provider</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;sentence-transformers&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">model</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;all-MiniLM-L6-v2&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">modelPath</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;/models/embeddings/all-MiniLM-L6-v2&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">dimension</span><span class="o">:</span><span class="w"> </span><span class="mf">384</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">normalize</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">device</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;cuda&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">batchSize</span><span class="o">:</span><span class="w"> </span><span class="mf">32</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">endpoint</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;http://localhost:8081&quot;</span>
+<span class="p">}</span>
+
+<span class="c1">// Set new config</span>
+<span class="k">await</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">electronAPI</span><span class="p">.</span><span class="nx">embeddingConfigSet</span><span class="p">({</span>
+<span class="w">  </span><span class="nx">provider</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;openai&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">model</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;text-embedding-3-small&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">apiKey</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;sk-...&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">dimension</span><span class="o">:</span><span class="w"> </span><span class="mf">1536</span>
+<span class="p">});</span>
+
+<span class="c1">// Discover local models</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">models</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">electronAPI</span><span class="p">.</span><span class="nx">embeddingLocalDiscover</span><span class="p">();</span>
+<span class="c1">// Returns:</span>
+<span class="p">[</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;all-MiniLM-L6-v2&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">dimension</span><span class="o">:</span><span class="w"> </span><span class="mf">384</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">size</span><span class="o">:</span><span class="w"> </span><span class="mf">80000000</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">multilingual</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;paraphrase-multilingual-MiniLM-L12-v2&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">dimension</span><span class="o">:</span><span class="w"> </span><span class="mf">384</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">size</span><span class="o">:</span><span class="w"> </span><span class="mf">420000000</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">multilingual</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">]</span>
+
+<span class="c1">// Start local server</span>
+<span class="k">await</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">electronAPI</span><span class="p">.</span><span class="nx">embeddingLocalStart</span><span class="p">({</span>
+<span class="w">  </span><span class="nx">model</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;all-MiniLM-L6-v2&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">port</span><span class="o">:</span><span class="w"> </span><span class="mf">8081</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">device</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;cuda&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">batch_size</span><span class="o">:</span><span class="w"> </span><span class="mf">32</span>
+<span class="p">});</span>
+<span class="c1">// Returns: {success: true, port: 8081}</span>
+
+<span class="c1">// Stop local server</span>
+<span class="k">await</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">electronAPI</span><span class="p">.</span><span class="nx">embeddingLocalStop</span><span class="p">();</span>
+<span class="c1">// Returns: {success: true}</span>
+
+<span class="c1">// Check server status</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">electronAPI</span><span class="p">.</span><span class="nx">embeddingLocalStatus</span><span class="p">();</span>
+<span class="c1">// Returns:</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">running</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">port</span><span class="o">:</span><span class="w"> </span><span class="mf">8081</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">model</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;all-MiniLM-L6-v2&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">device</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;cuda&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">requests</span><span class="o">:</span><span class="w"> </span><span class="mf">347</span>
+<span class="p">}</span>
+
+<span class="c1">// Test embedding</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">testResult</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">electronAPI</span><span class="p">.</span><span class="nx">embeddingConfigTest</span><span class="p">({</span>
+<span class="w">  </span><span class="nx">text</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;This is a test sentence for embedding&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">provider</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;local&quot;</span>
+<span class="p">});</span>
+<span class="c1">// Returns:</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">success</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">embedding</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="mf">0.123</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">0.456</span><span class="p">,</span><span class="w"> </span><span class="mf">0.789</span><span class="p">,</span><span class="w"> </span><span class="p">...],</span><span class="w">  </span><span class="c1">// 384 values</span>
+<span class="w">  </span><span class="nx">dimension</span><span class="o">:</span><span class="w"> </span><span class="mf">384</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">latency</span><span class="o">:</span><span class="w"> </span><span class="mf">12</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="45-activity-stream-ipc">4.5 Activity Stream IPC<a class="headerlink" href="#45-activity-stream-ipc" title="Permanent link">&para;</a></h3>
+<p>Push events dal backend verso UI per activity log.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Setup listeners all&#39;init del pannello</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">setupActivityListeners</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">  </span><span class="c1">// Planner events</span>
+<span class="w">  </span><span class="nb">window</span><span class="p">.</span><span class="nx">electronAPI</span><span class="p">.</span><span class="nx">onPlannerUpdate</span><span class="p">((</span><span class="nx">data</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">appendActivity</span><span class="p">({</span>
+<span class="w">      </span><span class="nx">timestamp</span><span class="o">:</span><span class="w"> </span><span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">(),</span>
+<span class="w">      </span><span class="nx">agent</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;planner&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;update&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">icon</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;📋&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">message</span><span class="o">:</span><span class="w"> </span><span class="nx">data</span><span class="p">.</span><span class="nx">message</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">progress</span><span class="o">:</span><span class="w"> </span><span class="nx">data</span><span class="p">.</span><span class="nx">progress</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">details</span><span class="o">:</span><span class="w"> </span><span class="nx">data</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="w">  </span><span class="p">});</span>
+
+<span class="w">  </span><span class="nb">window</span><span class="p">.</span><span class="nx">electronAPI</span><span class="p">.</span><span class="nx">onPlannerDone</span><span class="p">((</span><span class="nx">result</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">appendActivity</span><span class="p">({</span>
+<span class="w">      </span><span class="nx">timestamp</span><span class="o">:</span><span class="w"> </span><span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">(),</span>
+<span class="w">      </span><span class="nx">agent</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;planner&quot;</span><span class="p">,</span>
+
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;LLM config:&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">getLLMConfig</span><span class="p">());</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Embedding config:&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">getEmbeddingConfig</span><span class="p">());</span>
+<span class="w">  </span><span class="p">},</span>
+
+<span class="w">  </span><span class="c1">// Force refresh</span>
+<span class="w">  </span><span class="k">async</span><span class="w"> </span><span class="nx">forceRefresh</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">refreshAllAgentStatus</span><span class="p">();</span>
+<span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">refreshActivityLog</span><span class="p">();</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Force refresh completed&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="p">},</span>
+
+<span class="w">  </span><span class="c1">// Clear cache</span>
+<span class="w">  </span><span class="nx">clearCache</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">removeItem</span><span class="p">(</span><span class="s2">&quot;agent_status_cache&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">removeItem</span><span class="p">(</span><span class="s2">&quot;activity_log_cache&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Cache cleared&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="p">},</span>
+
+<span class="w">  </span><span class="c1">// Simulate agent event</span>
+<span class="w">  </span><span class="nx">simulateEvent</span><span class="p">(</span><span class="nx">agent</span><span class="p">,</span><span class="w"> </span><span class="nx">type</span><span class="p">,</span><span class="w"> </span><span class="nx">data</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">Events</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s2">&quot;agent:event&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">agent</span><span class="o">:</span><span class="w"> </span><span class="nx">agent</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="nx">type</span><span class="p">,</span>
+<span class="w">      </span><span class="p">...</span><span class="nx">data</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Simulated </span><span class="si">${</span><span class="nx">type</span><span class="si">}</span><span class="sb"> event for </span><span class="si">${</span><span class="nx">agent</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div>
+<hr />
+<h2 id="12-sicurezza-e-permissions">12. SICUREZZA E PERMISSIONS<a class="headerlink" href="#12-sicurezza-e-permissions" title="Permanent link">&para;</a></h2>
+<h3 id="121-agent-execution-permissions">12.1 Agent Execution Permissions<a class="headerlink" href="#121-agent-execution-permissions" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1">// Verifica permessi prima esecuzione</span>
+<span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">checkAgentPermissions</span><span class="p">(</span><span class="nx">agent</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">permissions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">electronAPI</span><span class="p">.</span><span class="nx">getAgentPermissions</span><span class="p">(</span><span class="nx">agent</span><span class="p">);</span>
+
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">permissions</span><span class="p">.</span><span class="nx">canExecute</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">showPermissionDenied</span><span class="p">({</span>
+<span class="w">      </span><span class="nx">agent</span><span class="o">:</span><span class="w"> </span><span class="nx">agent</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">reason</span><span class="o">:</span><span class="w"> </span><span class="nx">permissions</span><span class="p">.</span><span class="nx">reason</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">required</span><span class="o">:</span><span class="w"> </span><span class="nx">permissions</span><span class="p">.</span><span class="nx">requiredPermissions</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="122-api-key-security">12.2 API Key Security<a class="headerlink" href="#122-api-key-security" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1">// API key storage sicuro</span>
+<span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">saveAPIKey</span><span class="p">(</span><span class="nx">provider</span><span class="p">,</span><span class="w"> </span><span class="nx">key</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// Encrypt before saving</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">encrypted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">electronAPI</span><span class="p">.</span><span class="nx">encryptSecret</span><span class="p">(</span><span class="nx">key</span><span class="p">);</span>
+
+<span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">electronAPI</span><span class="p">.</span><span class="nx">llmConfigSet</span><span class="p">({</span>
+<span class="w">    </span><span class="nx">provider</span><span class="o">:</span><span class="w"> </span><span class="nx">provider</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">apiKeyEncrypted</span><span class="o">:</span><span class="w"> </span><span class="nx">encrypted</span>
+<span class="w">  </span><span class="p">});</span>
+
+<span class="w">  </span><span class="c1">// Never store plain key in localStorage or memory</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="123-local-server-isolation">12.3 Local Server Isolation<a class="headerlink" href="#123-local-server-isolation" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1">// Server locali isolati</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">serverConfig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">llm</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">host</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span><span class="w">  </span><span class="c1">// Solo localhost</span>
+<span class="w">    </span><span class="nx">port</span><span class="o">:</span><span class="w"> </span><span class="mf">8080</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">allowedOrigins</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;http://localhost&quot;</span><span class="p">]</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nx">embedding</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">host</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">port</span><span class="o">:</span><span class="w"> </span><span class="mf">8081</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">allowedOrigins</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;http://localhost&quot;</span><span class="p">]</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div>
+<hr />
+<h2 id="13-performance-metrics">13. PERFORMANCE METRICS<a class="headerlink" href="#13-performance-metrics" title="Permanent link">&para;</a></h2>
+<h3 id="131-monitoring">13.1 Monitoring<a class="headerlink" href="#131-monitoring" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1">// Metriche performance panel</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">metrics</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">agentExecutionTimes</span><span class="o">:</span><span class="w"> </span><span class="p">{},</span>
+<span class="w">  </span><span class="nx">activityLogSize</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">renderTime</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">memoryUsage</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+
+<span class="w">  </span><span class="nx">track</span><span class="p">(</span><span class="nx">agent</span><span class="p">,</span><span class="w"> </span><span class="nx">duration</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">agentExecutionTimes</span><span class="p">[</span><span class="nx">agent</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="nx">agentExecutionTimes</span><span class="p">[</span><span class="nx">agent</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">agentExecutionTimes</span><span class="p">[</span><span class="nx">agent</span><span class="p">].</span><span class="nx">push</span><span class="p">(</span><span class="nx">duration</span><span class="p">);</span>
+<span class="w">  </span><span class="p">},</span>
+
+<span class="w">  </span><span class="nx">getAverageExecutionTime</span><span class="p">(</span><span class="nx">agent</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">times</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">agentExecutionTimes</span><span class="p">[</span><span class="nx">agent</span><span class="p">]</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">[];</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">times</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">times</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">b</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nx">times</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+<span class="w">  </span><span class="p">},</span>
+
+<span class="w">  </span><span class="nx">report</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;=== AGENTS PANEL METRICS ===&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">agentExecutionTimes</span><span class="p">).</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">agent</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">agent</span><span class="si">}</span><span class="sb">: </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">getAverageExecutionTime</span><span class="p">(</span><span class="nx">agent</span><span class="p">)</span><span class="si">}</span><span class="sb">ms avg`</span><span class="p">);</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div>
+<hr />
+<p><strong>Fine documentazione PANEL 03 — AGENTS PANEL</strong></p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    2025-12-24
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "navigation.indexes", "content.tabs.link", "content.code.copy", "content.code.annotate", "search.suggest", "search.highlight", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

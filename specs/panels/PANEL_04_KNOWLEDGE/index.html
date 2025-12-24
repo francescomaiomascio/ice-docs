@@ -1,0 +1,3380 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Integrated Cognitive Environment — a system-level development environment">
+      
+      
+        <meta name="author" content="Francesco Maiomascio">
+      
+      
+        <link rel="canonical" href="https://francescomaiomascio.github.io/ICE-Studio/specs/panels/PANEL_04_KNOWLEDGE/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>📚 PANEL 04 — KNOWLEDGE PANEL - ICE Studio</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#panel-04-knowledge-panel" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="ICE Studio" class="md-header__button md-logo" aria-label="ICE Studio" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ICE Studio
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              📚 PANEL 04 — KNOWLEDGE PANEL
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/francescomaiomascio/ICE-Studio" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    francescomaiomascio/ICE-Studio
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="ICE Studio" class="md-nav__button md-logo" aria-label="ICE Studio" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ICE Studio
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/francescomaiomascio/ICE-Studio" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    francescomaiomascio/ICE-Studio
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../getting-started/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Getting Started
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/requirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Requirements
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/local-runtime/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Local Runtime
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/gui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GUI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/first-launch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    First Launch
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../tutorials/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tutorials
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/first-run/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    First Run
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/dashboard-tour/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dashboard Tour
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/system-agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System Agent
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/logs-and-analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Logs & Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../concepts/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Concepts
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Concepts
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../concepts/terminology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Terminology
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../concepts/project-vs-workspace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project vs Workspace
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../concepts/knowledge-types/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Knowledge Types
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../concepts/phases-vs-modes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Phases vs Modes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../concepts/system-vs-project/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System vs Project
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../architecture/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Architecture
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../architecture/phases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cognitive Phases
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../architecture/engine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ICE Engine
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../architecture/backend-runtime/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backend Runtime
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../architecture/gui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GUI Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../architecture/logical-topology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Logical Topology
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../runtime/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Runtime
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Runtime
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../runtime/lifecycle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lifecycle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../runtime/logging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Logging
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../runtime/orchestration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Orchestration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../runtime/diagnostics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diagnostics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../cognition/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cognition
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Cognition
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cognition/agents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agents
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cognition/knowledge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Knowledge
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cognition/llm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LLM Integration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cognition/memory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Memory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../networking/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Networking
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Networking
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../networking/icenet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ICENet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../networking/icep/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ICEP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../networking/network-topology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Network Topology
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../networking/flake/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flake
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../networking/snowball/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Snowball
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../security/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_9" id="__nav_9_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Security
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../security/local-first/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Local-First
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../security/data-isolation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Isolation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../security/knowledge-boundaries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Knowledge Boundaries
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../security/threat-model/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Threat Model
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_10" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../extensibility/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Extensibility
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_10" id="__nav_10_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Extensibility
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../extensibility/plugins/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plugins
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../extensibility/agents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Extensions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../extensibility/protocols/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Protocol Extensions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../extensibility/future-engines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Future Engines
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../development/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Development
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_11" id="__nav_11_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Development
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../development/status/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Status
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../development/roadmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roadmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../development/decisions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Decisions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../development/milestones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Milestones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Specs
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Specs
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../OVERVIEW/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OVERVIEW
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="panel-04-knowledge-panel">📚 PANEL 04 — KNOWLEDGE PANEL<a class="headerlink" href="#panel-04-knowledge-panel" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>Workspace → Knowledge Base &amp; Semantic Graph Management</strong></p>
+</blockquote>
+<hr />
+<h2 id="0-overview-funzionale">📋 0. OVERVIEW FUNZIONALE<a class="headerlink" href="#0-overview-funzionale" title="Permanent link">&para;</a></h2>
+<p>Il <strong>Knowledge Panel</strong> è il pannello centrale per la gestione della conoscenza strutturata del workspace.</p>
+<h3 id="responsabilita-principali">Responsabilità Principali<a class="headerlink" href="#responsabilita-principali" title="Permanent link">&para;</a></h3>
+<ul>
+<li>🧠 Costruire e visualizzare la <strong>knowledge base strutturata</strong></li>
+<li>🕸️ Gestire grafi semantici (entità, relazioni, inferenze)</li>
+<li>🔢 Generare e interrogare embedding vettoriali</li>
+<li>⏱️ Mantenere timeline evolutiva del progetto</li>
+<li>📸 Gestire snapshot e revisioni semantic-based</li>
+<li>🔄 Sincronizzare knowledge con sistemi esterni (Obsidian)</li>
+<li>🔍 Analizzare e dedurre pattern automaticamente</li>
+<li>🐛 Debuggare il sistema RAG e knowledge</li>
+</ul>
+<h3 id="posizionamento-nel-workflow">Posizionamento nel Workflow<a class="headerlink" href="#posizionamento-nel-workflow" title="Permanent link">&para;</a></h3>
+<p>Il pannello funge da <strong>"cervello semantico"</strong> del workspace, integrando:</p>
+<ul>
+<li><strong>Knowledge Agent</strong> → costruisce e interroga la knowledge base</li>
+<li><strong>Graph Engine</strong> → genera ed evolve il knowledge graph</li>
+<li><strong>RAG Pipeline</strong> → gestisce embeddings e vector search</li>
+<li><strong>Historian Agent</strong> → costruisce timeline e snapshot</li>
+<li><strong>Knowledge Sync Agent</strong> → esporta verso sistemi esterni</li>
+<li><strong>Project Agent</strong> → fornisce seed knowledge iniziale</li>
+</ul>
+<h3 id="importanza-strategica">Importanza Strategica<a class="headerlink" href="#importanza-strategica" title="Permanent link">&para;</a></h3>
+<p>È l'unico pannello che integra:
+- ✅ L'intero asse semantico del workspace
+- ✅ La storia evolutiva del progetto
+- ✅ Il sistema di retrieval augmented generation (RAG)
+- ✅ L'export della conoscenza verso tool esterni</p>
+<blockquote>
+<p>💡 <strong>Il Knowledge Panel è dove i dati diventano conoscenza strutturata e navigabile.</strong></p>
+</blockquote>
+<hr />
+<h2 id="1-layout-strutturale-ui">🖼️ 1. LAYOUT STRUTTURALE (UI)<a class="headerlink" href="#1-layout-strutturale-ui" title="Permanent link">&para;</a></h2>
+<h3 id="11-layout-globale-ereditato-dal-workspace">1.1 Layout Globale Ereditato dal Workspace<a class="headerlink" href="#11-layout-globale-ereditato-dal-workspace" title="Permanent link">&para;</a></h3>
+<p>Elementi indipendenti dal pannello:</p>
+<table>
+<thead>
+<tr>
+<th>Elemento</th>
+<th>Posizione</th>
+<th>Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Chat LLM</strong></td>
+<td>Right (persistente)</td>
+<td>Query semantiche, RAG queries</td>
+</tr>
+<tr>
+<td><strong>File Explorer</strong></td>
+<td>Left</td>
+<td>File tree del progetto</td>
+</tr>
+<tr>
+<td><strong>TopBar</strong></td>
+<td>Top</td>
+<td>Status knowledge, sync, refresh graph</td>
+</tr>
+<tr>
+<td><strong>Bottom Downbar</strong></td>
+<td>Bottom</td>
+<td>Pannelli 1..11</td>
+</tr>
+<tr>
+<td><strong>Bottom Terminal Toggle</strong></td>
+<td>Bottom (sopra downbar)</td>
+<td>Terminal / debug / output / ports</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="12-layout-interno-del-knowledge-panel">1.2 Layout Interno del Knowledge Panel<a class="headerlink" href="#12-layout-interno-del-knowledge-panel" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code> ┌─────────────────────────────────────────────────────────────────────────┐
+ │ TOPBAR: Knowledge Status | Graph Nodes: 450 | Embeddings: 1.2k | Sync   │
+ ├────────┬────────────────────────────────────────────────────┬───────────┤
+ │        │                                                    │           │
+ │  FILE  │  KNOWLEDGE STORAGE VIEW (panel-local sidebar)      │           │
+ │        │   - Knowledge Base                                 │           │
+ │  EXP   │      • Entities                                    │           │
+ │  LOR   │      • Relationships                               │           │
+ │  ER    │      • Documents                                   │           │
+ │        │      • Chunks                                      │   CHAT    │
+ │  (VS   │   - Embeddings                                     │   LLM     │
+ │  Code  │      • Vector Index                                │           │
+ │  like) │      • Models                                      │  (multi   │
+ │        │      • Refresh / Dedup                             │   chat)   │
+ │        │   - RAG Sessions                                   │           │
+ │        │      • Query History                               │  (persi   │
+ │        │      • Results                                     │   stent)  │
+ │        │      • Debug Traces                                │           │
+ │        │   - Snapshots                                      │  &quot;Ask     │
+ │        │      • Snapshot List                               │   Graph   │
+ │        │      • Restore Preview                             │   Ask     │
+ │        │      • Diff Preview                                │   RAG     │
+ │        ├────────────────────────────────────────────────────┤   Query&quot;  │
+ │        │                                                    │           │
+ │        │  MAIN AREA (tab-based)                             │           │
+ │        │                                                    │           │
+ │        │  [A] KNOWLEDGE GRAPH CANVAS (Obsidian-style)       │           │
+ │        │  - Nodes: entities/chunks/documents/concepts       │           │
+ │        │  - Edges: relations/similarity/inference           │           │
+ │        │  - Pan/Zoom/Drag controls                          │           │
+ │        │  - Filters: type/source/time/cluster               │           │
+ │        │  - Overlays: heatmap/paths/influence/events        │           │
+ │        │                                                    │           │
+ │        │  [B] RAG EXPLORER                                  │           │
+ │        │  - Embedding list &amp; chunk viewer                   │           │
+ │        │  - Vector search &amp; top-K explorer                  │           │
+ │        │  - Query execution &amp; debugging                     │           │
+ │        │  - Cluster visualization (PCA/UMAP)                │           │
+ │        │                                                    │           │
+ │        │  [C] KNOWLEDGE TABLE                               │           │
+ │        │  - Entities / Documents / Chunks                   │           │
+ │        │  - Relationships / Events / Inferences             │           │
+ │        │  - Filters, search, graph preview                  │           │
+ │        │                                                    │           │
+ │        │  [D] TIMELINE EDITOR (DaVinci Resolve style)       │           │
+ │        │  - Snapshot blocks &amp; event markers                 │           │
+ │        │  - Temporal scrubber &amp; playback                    │           │
+ │        │  - Diff viewer (knowledge/graph)                   │           │
+ │        │  - Export timeline to MD                           │           │
+ │        │                                                    │           │
+ │        │  [E] KNOWLEDGE CONSOLE                             │           │
+ │        │  - DSL commands: graph.find, rag.similar, etc.     │           │
+ │        │  - Direct agent interaction                        │           │
+ │        │                                                    │           │
+ ├────────┴────────────────────────────────────────────────────┴───────────┤
+ │ TERMINAL TOGGLE: [Terminal] [Debug Console] [Output] [Ports]            │
+ ├─────────────────────────────────────────────────────────────────────────┤
+ │ DOWNBAR: [①Storage][②Sketch][③Agents][④Knowledge]...[⑪Settings]       │
+ └─────────────────────────────────────────────────────────────────────────┘
+</code></pre></div>
+<hr />
+<h2 id="2-componenti-principali-del-pannello">🧩 2. COMPONENTI PRINCIPALI DEL PANNELLO<a class="headerlink" href="#2-componenti-principali-del-pannello" title="Permanent link">&para;</a></h2>
+<h3 id="21-knowledge-graph-canvas-obsidian-style">2.1 KNOWLEDGE GRAPH CANVAS (Obsidian-style)<a class="headerlink" href="#21-knowledge-graph-canvas-obsidian-style" title="Permanent link">&para;</a></h3>
+<p>Visualizzazione interattiva del grafo semantico.</p>
+<h4 id="elementi-del-grafo">Elementi del Grafo<a class="headerlink" href="#elementi-del-grafo" title="Permanent link">&para;</a></h4>
+<p><strong>Nodi:</strong>
+- Entità (concepts, modules, classes)
+- Chunk di testo
+- Documenti
+- File sorgente
+- Eventi
+- Refactor points</p>
+<p><strong>Edges:</strong>
+- Relazioni semantiche
+- Inferenze
+- Similarità embeddings
+- Tracce temporali</p>
+<h4 id="funzionalita-interattive">Funzionalità Interattive<a class="headerlink" href="#funzionalita-interattive" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Funzione</th>
+<th>Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Pan/Zoom</strong></td>
+<td>Navigazione fluida del grafo</td>
+</tr>
+<tr>
+<td><strong>Drag nodes</strong></td>
+<td>Riorganizzazione manuale</td>
+</tr>
+<tr>
+<td><strong>Double-click</strong></td>
+<td>Apre detail panel con metadati</td>
+</tr>
+<tr>
+<td><strong>Context menu</strong></td>
+<td>Azioni rapide su nodi/edge</td>
+</tr>
+</tbody>
+</table>
+<h4 id="filtri-disponibili">Filtri Disponibili<a class="headerlink" href="#filtri-disponibili" title="Permanent link">&para;</a></h4>
+<ul>
+<li>🏷️ <strong>Entity type</strong> (module/class/function/concept)</li>
+<li>📁 <strong>Source</strong> (file/planner/logs/code)</li>
+<li>⏰ <strong>Time-slice</strong> (snapshot temporale)</li>
+<li>🎯 <strong>Cluster</strong> (embedding clusters)</li>
+</ul>
+<h4 id="overlays">Overlays<a class="headerlink" href="#overlays" title="Permanent link">&para;</a></h4>
+<ul>
+<li>🌡️ <strong>Heatmap</strong> embeddings</li>
+<li>🛤️ <strong>Path highlight</strong> (shortest path)</li>
+<li>📊 <strong>Influence graph</strong> (impact analysis)</li>
+<li>📍 <strong>Event markers</strong> (Historian)</li>
+</ul>
+<h4 id="backend-coinvolti">Backend Coinvolti<a class="headerlink" href="#backend-coinvolti" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>graph.build
+graph.search
+knowledge.entity.get
+knowledge.relationship.list
+historian.timeline.events
+</code></pre></div>
+<hr />
+<h3 id="22-rag-explorer">2.2 RAG EXPLORER<a class="headerlink" href="#22-rag-explorer" title="Permanent link">&para;</a></h3>
+<p>UI completa per il sistema Retrieval Augmented Generation.</p>
+<h4 id="sezioni-principali">Sezioni Principali<a class="headerlink" href="#sezioni-principali" title="Permanent link">&para;</a></h4>
+<p><strong>A. Embedding Management</strong>
+- Lista embedding generati
+- Chunk viewer con preview
+- Status modelli embedding
+- Operazioni: refresh, dedup, reindex</p>
+<p><strong>B. Vector Search</strong>
+- Query testuale → vector search
+- Top-K results explorer
+- Similarity scores visualization
+- Context scoring</p>
+<p><strong>C. RAG Debugging</strong>
+- Chunk selection pipeline
+- Prompt building steps
+- Context assembly
+- LLM response analysis</p>
+<p><strong>D. Cluster Visualization</strong>
+- PCA/UMAP projection
+- Embedding clusters
+- Semantic grouping
+- Outlier detection</p>
+<h4 id="funzionalita-avanzate">Funzionalità Avanzate<a class="headerlink" href="#funzionalita-avanzate" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>💬 Query: &quot;authentication flow&quot;
+  ↓
+📊 Vector search results (top-10)
+  ↓
+🎯 Highlight nodes in Graph Canvas
+  ↓
+📈 Show similarity overlay
+</code></pre></div>
+<h4 id="backend-coinvolti_1">Backend Coinvolti<a class="headerlink" href="#backend-coinvolti_1" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>rag.query
+rag.vector.search
+rag.sessions.list
+embedding.generate
+embedding.status
+</code></pre></div>
+<hr />
+<h3 id="23-knowledge-table">2.3 KNOWLEDGE TABLE<a class="headerlink" href="#23-knowledge-table" title="Permanent link">&para;</a></h3>
+<p>Vista tabellare strutturata della knowledge base.</p>
+<h4 id="tabelle-disponibili">Tabelle Disponibili<a class="headerlink" href="#tabelle-disponibili" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Tabella</th>
+<th>Contenuto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Entities</strong></td>
+<td>Tutte le entità della knowledge base</td>
+</tr>
+<tr>
+<td><strong>Documents</strong></td>
+<td>Documenti ingestiti</td>
+</tr>
+<tr>
+<td><strong>Chunks</strong></td>
+<td>Chunk di testo per RAG</td>
+</tr>
+<tr>
+<td><strong>Relationships</strong></td>
+<td>Relazioni tra entità</td>
+</tr>
+<tr>
+<td><strong>Events</strong></td>
+<td>Eventi timeline (Historian)</td>
+</tr>
+<tr>
+<td><strong>Inferences</strong></td>
+<td>Inferenze automatiche</td>
+</tr>
+</tbody>
+</table>
+<h4 id="funzionalita-per-tabella">Funzionalità per Tabella<a class="headerlink" href="#funzionalita-per-tabella" title="Permanent link">&para;</a></h4>
+<ul>
+<li>🔍 <strong>Filtri</strong> multipli</li>
+<li>🔎 <strong>Ricerca</strong> full-text</li>
+<li>📊 <strong>Open in graph</strong> → highlight nel canvas</li>
+<li>📄 <strong>Open raw JSON</strong> → vista metadati completi</li>
+<li>🔄 <strong>Sync to Obsidian</strong> → export via KnowledgeSyncAgent</li>
+<li>👁️ <strong>Preview</strong> contenuto inline</li>
+</ul>
+<h4 id="agenti-coinvolti">Agenti Coinvolti<a class="headerlink" href="#agenti-coinvolti" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>KnowledgeAgent</strong> → CRUD operations</li>
+<li><strong>HistorianAgent</strong> → eventi e snapshot</li>
+<li><strong>KnowledgeSyncAgent</strong> → export e sincronizzazione</li>
+</ul>
+<hr />
+<h3 id="24-timeline-editor-davinci-resolve-style">2.4 TIMELINE EDITOR (DaVinci Resolve Style)<a class="headerlink" href="#24-timeline-editor-davinci-resolve-style" title="Permanent link">&para;</a></h3>
+<p>Timeline interattiva degli eventi del progetto.</p>
+<h4 id="blocchi-timeline">Blocchi Timeline<a class="headerlink" href="#blocchi-timeline" title="Permanent link">&para;</a></h4>
+<p><strong>Snapshot Blocks:</strong>
+- 📸 Snapshot knowledge
+- 🕸️ Snapshot grafo
+- 🤖 Eventi agenti</p>
+<p><strong>Event Markers:</strong>
+- 📥 Ingest/update documenti
+- 📋 Planner → steps
+- 🔍 Scanner → file changed
+- 📊 Analyzer → hotspot
+- ✅ Validator → tests
+- 🔧 Codegen → patch &amp; diff</p>
+<h4 id="funzionalita-interattive_1">Funzionalità Interattive<a class="headerlink" href="#funzionalita-interattive_1" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Funzione</th>
+<th>Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Temporal scrubber</strong></td>
+<td>Navigazione temporale</td>
+</tr>
+<tr>
+<td><strong>Snapshot diff</strong></td>
+<td>Confronto knowledge/graph tra snapshot</td>
+</tr>
+<tr>
+<td><strong>Markers</strong></td>
+<td>Annotazioni temporali</td>
+</tr>
+<tr>
+<td><strong>Playback</strong></td>
+<td>Riproduzione sequenza eventi</td>
+</tr>
+<tr>
+<td><strong>Export</strong></td>
+<td>Timeline → MD (via KnowledgeSyncAgent)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="backend-coinvolti_2">Backend Coinvolti<a class="headerlink" href="#backend-coinvolti_2" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>historian.timeline.get
+historian.snapshot.diff
+knowledge.sync.timeline
+</code></pre></div>
+<hr />
+<h3 id="25-knowledge-console">2.5 KNOWLEDGE CONSOLE<a class="headerlink" href="#25-knowledge-console" title="Permanent link">&para;</a></h3>
+<p>Terminale specializzato con DSL interno per operazioni avanzate.</p>
+<h4 id="comandi-disponibili">Comandi Disponibili<a class="headerlink" href="#comandi-disponibili" title="Permanent link">&para;</a></h4>
+<p><strong>Graph Operations:</strong>
+<div class="highlight"><pre><span></span><code>graph.find<span class="o">(</span><span class="s2">&quot;Auth → Login&quot;</span><span class="o">)</span>
+graph.paths<span class="o">(</span><span class="s2">&quot;User&quot;</span>,<span class="w"> </span><span class="s2">&quot;Session&quot;</span><span class="o">)</span>
+graph.cluster<span class="o">(</span><span class="s2">&quot;authentication&quot;</span><span class="o">)</span>
+</code></pre></div></p>
+<p><strong>Knowledge Operations:</strong>
+<div class="highlight"><pre><span></span><code>knowledge.entity.update<span class="o">(</span><span class="s2">&quot;User&quot;</span>,<span class="w"> </span><span class="o">{</span>...<span class="o">})</span>
+knowledge.ingest<span class="o">(</span><span class="s2">&quot;docs/security.md&quot;</span><span class="o">)</span>
+knowledge.search<span class="o">(</span><span class="s2">&quot;password reset&quot;</span><span class="o">)</span>
+</code></pre></div></p>
+<p><strong>RAG Operations:</strong>
+<div class="highlight"><pre><span></span><code>rag.similar<span class="o">(</span><span class="s2">&quot;reset password&quot;</span><span class="o">)</span>
+rag.reindex<span class="o">()</span>
+rag.query<span class="o">(</span><span class="s2">&quot;how to authenticate&quot;</span><span class="o">)</span>
+</code></pre></div></p>
+<p><strong>Timeline Operations:</strong>
+<div class="highlight"><pre><span></span><code>timeline.snapshot<span class="o">(</span><span class="s2">&quot;PreRefactor&quot;</span><span class="o">)</span>
+timeline.diff<span class="o">(</span><span class="s2">&quot;v1&quot;</span>,<span class="w"> </span><span class="s2">&quot;v2&quot;</span><span class="o">)</span>
+timeline.export<span class="o">(</span><span class="s2">&quot;refactor_history.md&quot;</span><span class="o">)</span>
+</code></pre></div></p>
+<p><strong>Sync Operations:</strong>
+<div class="highlight"><pre><span></span><code>sync.obsidian<span class="o">(</span><span class="s2">&quot;knowledge.md&quot;</span><span class="o">)</span>
+sync.timeline<span class="o">(</span><span class="s2">&quot;project_timeline.md&quot;</span><span class="o">)</span>
+sync.analysis<span class="o">(</span><span class="s2">&quot;hotspots.md&quot;</span><span class="o">)</span>
+</code></pre></div></p>
+<h4 id="agenti-coinvolti_1">Agenti Coinvolti<a class="headerlink" href="#agenti-coinvolti_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>KnowledgeAgent</li>
+<li>GraphBuilder</li>
+<li>RAGPipeline</li>
+<li>HistorianAgent</li>
+<li>KnowledgeSyncAgent</li>
+</ul>
+<hr />
+<h3 id="26-knowledge-storage-view-panel-local-sidebar">2.6 KNOWLEDGE STORAGE VIEW (Panel-Local Sidebar)<a class="headerlink" href="#26-knowledge-storage-view-panel-local-sidebar" title="Permanent link">&para;</a></h3>
+<p>Organizzazione gerarchica delle risorse knowledge.</p>
+<h4 id="struttura">Struttura<a class="headerlink" href="#struttura" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>📚 Knowledge Base
+  ├── Entities (450)
+  ├── Relationships (320)
+  ├── Documents (85)
+  └── Chunks (1,200)
+
+🔢 Embeddings
+  ├── Vector Index (FAISS)
+  ├── Models (sentence-transformers)
+  ├── Refresh
+  └── Dedup
+
+🔍 RAG Sessions
+  ├── Query History (45)
+  ├── Results Cache
+  └── Debug Traces
+
+📸 Snapshots
+  ├── Snapshot List (12)
+  ├── Restore Preview
+  └── Diff Preview
+</code></pre></div>
+<hr />
+<h2 id="3-ruoli-degli-agenti-architettura">⚙️ 3. RUOLI DEGLI AGENTI (Architettura)<a class="headerlink" href="#3-ruoli-degli-agenti-architettura" title="Permanent link">&para;</a></h2>
+<h3 id="31-knowledgeagent">3.1 KnowledgeAgent<a class="headerlink" href="#31-knowledgeagent" title="Permanent link">&para;</a></h3>
+<p><strong>Il motore centrale della knowledge.</strong></p>
+<h4 id="responsabilita">Responsabilità<a class="headerlink" href="#responsabilita" title="Permanent link">&para;</a></h4>
+<ul>
+<li>✅ Crea e aggiorna entità</li>
+<li>✅ Gestisce versioni knowledge</li>
+<li>✅ Analisi semantica</li>
+<li>✅ Collega chunk ai documenti</li>
+<li>✅ Aggiorna grafo tramite GraphBuilder</li>
+<li>✅ Comunica con RAGPipeline</li>
+</ul>
+<h4 id="backend-actions">Backend Actions<a class="headerlink" href="#backend-actions" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>knowledge.entity.create
+knowledge.ingest.document
+knowledge.search
+knowledge.update
+knowledge.graph.update
+</code></pre></div>
+<hr />
+<h3 id="32-graphbuilder-graphengine">3.2 GraphBuilder / GraphEngine<a class="headerlink" href="#32-graphbuilder-graphengine" title="Permanent link">&para;</a></h3>
+<p><strong>Costruttore e gestore del grafo semantico.</strong></p>
+<h4 id="elementi-generati">Elementi Generati<a class="headerlink" href="#elementi-generati" title="Permanent link">&para;</a></h4>
+<ul>
+<li>🔵 Entity nodes</li>
+<li>📄 Chunk nodes</li>
+<li>🔗 Relationship edges</li>
+<li>🎯 Similarity edges</li>
+<li>💡 Inference edges</li>
+</ul>
+<h4 id="backend-actions_1">Backend Actions<a class="headerlink" href="#backend-actions_1" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>graph.build
+graph.infer
+graph.search
+graph.cluster
+</code></pre></div>
+<h4 id="usato-da">Usato Da<a class="headerlink" href="#usato-da" title="Permanent link">&para;</a></h4>
+<ul>
+<li>KnowledgeAgent</li>
+<li>RAGPipeline</li>
+<li>HistorianAgent</li>
+</ul>
+<hr />
+<h3 id="33-ragpipeline-embeddingengine">3.3 RAGPipeline / EmbeddingEngine<a class="headerlink" href="#33-ragpipeline-embeddingengine" title="Permanent link">&para;</a></h3>
+<p><strong>Sistema completo di retrieval augmented generation.</strong></p>
+<h4 id="funzionalita">Funzionalità<a class="headerlink" href="#funzionalita" title="Permanent link">&para;</a></h4>
+<ul>
+<li>🔢 Generazione embeddings</li>
+<li>✂️ Chunking intelligente</li>
+<li>📊 Vector index management</li>
+<li>🔍 Sessioni retrieval</li>
+<li>📈 Reranking results</li>
+<li>🧠 Context builder per LLM</li>
+</ul>
+<h4 id="backend-actions_2">Backend Actions<a class="headerlink" href="#backend-actions_2" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>rag.vector.search
+rag.query
+rag.ingest
+embedding.generate
+embedding.status
+</code></pre></div>
+<hr />
+<h3 id="34-historianagent">3.4 HistorianAgent<a class="headerlink" href="#34-historianagent" title="Permanent link">&para;</a></h3>
+<p><strong>Costruttore della timeline evolutiva del progetto.</strong></p>
+<h4 id="elementi-gestiti">Elementi Gestiti<a class="headerlink" href="#elementi-gestiti" title="Permanent link">&para;</a></h4>
+<ul>
+<li>⏱️ Timeline degli eventi</li>
+<li>📸 Snapshot del grafo</li>
+<li>💾 Snapshot della knowledge</li>
+<li>🔍 Tracce (TraceBuilder)</li>
+<li>📍 Markers del progetto</li>
+<li>🔗 Links tra planner/code/logs/graph/rag</li>
+</ul>
+<h4 id="backend-actions_3">Backend Actions<a class="headerlink" href="#backend-actions_3" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>timeline.push_event
+timeline.snapshot
+timeline.diff
+</code></pre></div>
+<h4 id="ui-nel-pannello">UI nel Pannello<a class="headerlink" href="#ui-nel-pannello" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Timeline Editor</li>
+<li>Event table</li>
+<li>Snapshot viewer</li>
+</ul>
+<hr />
+<h3 id="35-knowledgesyncagent">3.5 KnowledgeSyncAgent<a class="headerlink" href="#35-knowledgesyncagent" title="Permanent link">&para;</a></h3>
+<p><strong>Agente di export e sincronizzazione esterna.</strong></p>
+<blockquote>
+<p>💡 <strong>È l'unico agente di "external publishing" della Knowledge.</strong></p>
+</blockquote>
+<h4 id="funzionalita-di-export">Funzionalità di Export<a class="headerlink" href="#funzionalita-di-export" title="Permanent link">&para;</a></h4>
+<p><strong>A. Export → Obsidian (Markdown)</strong>
+- Summary knowledge
+- Items list
+- Entity list
+- Chunk list
+- Relationship map</p>
+<p><strong>B. Export Timeline</strong>
+- <code>sync_timeline</code>
+- MD navigabile
+- Snapshot e markers</p>
+<p><strong>C. Export Refactor Report</strong>
+- Diff changes
+- Proposed code
+- Reasoning</p>
+<p><strong>D. Export Analysis</strong>
+- Summary AnalyzerAgent
+- Reasoning
+- Hotspots</p>
+<p><strong>E. Export RAG Results</strong>
+- Query
+- Answer
+- Raw context</p>
+<h4 id="ui-nel-pannello_1">UI nel Pannello<a class="headerlink" href="#ui-nel-pannello_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>🔄 "Sync to Obsidian"</li>
+<li>📤 "Export Timeline"</li>
+<li>💾 "Export Query Result"</li>
+<li>📋 "Export Refactor Report"</li>
+<li>✅ Vista stato sync (success/failure)</li>
+</ul>
+<hr />
+<h3 id="36-projectagent">3.6 ProjectAgent<a class="headerlink" href="#36-projectagent" title="Permanent link">&para;</a></h3>
+<p><strong>Agente cross-panel che produce seed knowledge.</strong></p>
+<blockquote>
+<p>⚠️ Non appartiene ad un singolo pannello.</p>
+</blockquote>
+<h4 id="produce-dati-per">Produce Dati Per<a class="headerlink" href="#produce-dati-per" title="Permanent link">&para;</a></h4>
+<p><strong>Sketch Panel:</strong>
+- Steps, plan
+- Analyzer, scanner
+- Validator results</p>
+<p><strong>Knowledge Panel:</strong>
+- Knowledge base iniziale
+- Analysis metadata
+- Scanner results
+- Planner reasoning
+- Test results
+- Codegen patch
+- Timeline updates</p>
+<blockquote>
+<p>💡 <strong>È il collegamento tra il concettuale (Sketch) e il semantico (Knowledge).</strong></p>
+</blockquote>
+<hr />
+<h2 id="4-interazioni-backend-ws-requests">🔌 4. INTERAZIONI BACKEND (WS REQUESTS)<a class="headerlink" href="#4-interazioni-backend-ws-requests" title="Permanent link">&para;</a></h2>
+<h3 id="41-graph-operations">4.1 Graph Operations<a class="headerlink" href="#41-graph-operations" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>method: graph.build
+method: graph.search
+method: graph.infer
+method: graph.cluster
+</code></pre></div>
+<p><strong>Payload Example:</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;workspace_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;...&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;query&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;authentication&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;filters&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;module&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;source&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;code&quot;</span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<hr />
+<h3 id="42-knowledge-operations">4.2 Knowledge Operations<a class="headerlink" href="#42-knowledge-operations" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>method: knowledge.entity.create
+method: knowledge.ingest.document
+method: knowledge.search
+method: knowledge.update
+</code></pre></div>
+<hr />
+<h3 id="43-rag-operations">4.3 RAG Operations<a class="headerlink" href="#43-rag-operations" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>method: rag.query
+method: rag.vector.search
+method: rag.ingest
+method: embedding.generate
+</code></pre></div>
+<hr />
+<h3 id="44-timeline-operations">4.4 Timeline Operations<a class="headerlink" href="#44-timeline-operations" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>method: timeline.push_event
+method: timeline.snapshot
+method: timeline.diff
+method: historian.timeline.get
+</code></pre></div>
+<hr />
+<h3 id="45-sync-operations">4.5 Sync Operations<a class="headerlink" href="#45-sync-operations" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>method: knowledge.sync.obsidian
+method: knowledge.sync.timeline
+method: knowledge.sync.analysis
+</code></pre></div>
+<hr />
+<h2 id="5-stati-del-pannello">🔄 5. STATI DEL PANNELLO<a class="headerlink" href="#5-stati-del-pannello" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Stato</th>
+<th>Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>empty</code></td>
+<td>Knowledge base vuota</td>
+</tr>
+<tr>
+<td><code>loading</code></td>
+<td>Caricamento grafo/embeddings</td>
+</tr>
+<tr>
+<td><code>graph_view</code></td>
+<td>Visualizzazione grafo attiva</td>
+</tr>
+<tr>
+<td><code>rag_query_running</code></td>
+<td>Query RAG in esecuzione</td>
+</tr>
+<tr>
+<td><code>timeline_playing</code></td>
+<td>Playback timeline</td>
+</tr>
+<tr>
+<td><code>snapshot_diffing</code></td>
+<td>Confronto snapshot</td>
+</tr>
+<tr>
+<td><code>syncing</code></td>
+<td>Sincronizzazione Obsidian</td>
+</tr>
+<tr>
+<td><code>console_active</code></td>
+<td>Console in uso</td>
+</tr>
+<tr>
+<td><code>error</code></td>
+<td>Errore operazione knowledge</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="6-dipendenze">🔗 6. DIPENDENZE<a class="headerlink" href="#6-dipendenze" title="Permanent link">&para;</a></h2>
+<h3 id="agenti">Agenti<a class="headerlink" href="#agenti" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>KnowledgeAgent</strong></li>
+<li><strong>GraphBuilder / GraphEngine</strong></li>
+<li><strong>RAGPipeline / EmbeddingEngine</strong></li>
+<li><strong>HistorianAgent</strong></li>
+<li><strong>KnowledgeSyncAgent</strong></li>
+<li><strong>ProjectAgent</strong> (cross-panel)</li>
+</ul>
+<h3 id="moduli-core">Moduli Core<a class="headerlink" href="#moduli-core" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>SessionContext</strong></li>
+<li><strong>EmbeddingEngine</strong></li>
+<li><strong>VectorStore</strong> (FAISS/Chroma)</li>
+<li><strong>EventBus</strong> (frontend)</li>
+<li><strong>Electron IPC</strong></li>
+</ul>
+<hr />
+<h2 id="7-output-del-pannello">📦 7. OUTPUT DEL PANNELLO<a class="headerlink" href="#7-output-del-pannello" title="Permanent link">&para;</a></h2>
+<h3 id="file-generati-nel-workspace">File Generati nel Workspace<a class="headerlink" href="#file-generati-nel-workspace" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>workspace/
+├── knowledge/
+│   ├── entities.json
+│   ├── relationships.json
+│   ├── documents.json
+│   └── chunks.json
+├── graph/
+│   ├── graph.json
+│   ├── snapshot_*.json
+│   └── inference.json
+├── embeddings/
+│   ├── vector_index/
+│   └── embeddings.npz
+├── timeline/
+│   ├── events.jsonl
+│   ├── snapshots/
+│   └── markers.json
+├── exports/
+│   ├── knowledge.md (Obsidian)
+│   ├── timeline.md
+│   ├── analysis.md
+│   └── refactor_report.md
+└── rag/
+    ├── sessions.jsonl
+    └── query_cache.json
+</code></pre></div>
+<hr />
+<h2 id="8-edge-cases">⚠️ 8. EDGE CASES<a class="headerlink" href="#8-edge-cases" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Caso</th>
+<th>Comportamento</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Knowledge base vuota</td>
+<td>Suggerire ingestion iniziale</td>
+</tr>
+<tr>
+<td>Grafo troppo grande</td>
+<td>Lazy loading + clustering</td>
+</tr>
+<tr>
+<td>Embedding generation failed</td>
+<td>Mostra errore, suggerisce retry</td>
+</tr>
+<tr>
+<td>Vector index corrotto</td>
+<td>Ricostruzione automatica</td>
+</tr>
+<tr>
+<td>Snapshot non trovato</td>
+<td>Fallback a snapshot precedente</td>
+</tr>
+<tr>
+<td>Sync Obsidian failed</td>
+<td>Retry con exponential backoff</td>
+</tr>
+<tr>
+<td>RAG query timeout</td>
+<td>Cancellazione graceful</td>
+</tr>
+<tr>
+<td>Timeline troppo lunga</td>
+<td>Paginazione + virtual scrolling</td>
+</tr>
+<tr>
+<td>Console command invalid</td>
+<td>Help message + suggerimenti</td>
+</tr>
+<tr>
+<td>Graph rendering lento</td>
+<td>WebGL acceleration + LOD</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="9-note-di-implementazione">💻 9. NOTE DI IMPLEMENTAZIONE<a class="headerlink" href="#9-note-di-implementazione" title="Permanent link">&para;</a></h2>
+<h3 id="ottimizzazioni-tecniche">Ottimizzazioni Tecniche<a class="headerlink" href="#ottimizzazioni-tecniche" title="Permanent link">&para;</a></h3>
+<ul>
+<li>✅ <strong>Graph rendering:</strong> Usare WebGL (vis.js o cytoscape.js)</li>
+<li>✅ <strong>Large datasets:</strong> Lazy loading + virtualization</li>
+<li>✅ <strong>Embedding operations:</strong> Web Workers</li>
+<li>✅ <strong>Timeline playback:</strong> RequestAnimationFrame</li>
+<li>✅ <strong>Console DSL:</strong> Parser PEG.js o custom tokenizer</li>
+</ul>
+<h3 id="performance-considerations">Performance Considerations<a class="headerlink" href="#performance-considerations" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1">// Graph Canvas</span>
+<span class="o">-</span><span class="w"> </span><span class="nx">Max</span><span class="w"> </span><span class="mf">1000</span><span class="w"> </span><span class="nx">nodes</span><span class="w"> </span><span class="nx">visible</span><span class="w"> </span><span class="nx">simultaneously</span>
+<span class="o">-</span><span class="w"> </span><span class="nx">Clustering</span><span class="w"> </span><span class="nx">automatico</span><span class="w"> </span><span class="nx">oltre</span><span class="w"> </span><span class="nx">questa</span><span class="w"> </span><span class="nx">soglia</span>
+<span class="o">-</span><span class="w"> </span><span class="nx">LOD</span><span class="w"> </span><span class="p">(</span><span class="nx">Level</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nx">Detail</span><span class="p">)</span><span class="w"> </span><span class="nx">per</span><span class="w"> </span><span class="nx">zoom</span><span class="w"> </span><span class="nx">levels</span>
+
+<span class="c1">// RAG Explorer</span>
+<span class="o">-</span><span class="w"> </span><span class="nx">Chunking</span><span class="w"> </span><span class="nx">progressivo</span><span class="w"> </span><span class="p">(</span><span class="nx">streaming</span><span class="p">)</span>
+<span class="o">-</span><span class="w"> </span><span class="nx">Cache</span><span class="w"> </span><span class="nx">risultati</span><span class="w"> </span><span class="nx">vector</span><span class="w"> </span><span class="nx">search</span>
+<span class="o">-</span><span class="w"> </span><span class="nx">Debounce</span><span class="w"> </span><span class="nx">query</span><span class="w"> </span><span class="nx">input</span><span class="w"> </span><span class="p">(</span><span class="mf">300</span><span class="nx">ms</span><span class="p">)</span>
+
+<span class="c1">// Timeline</span>
+<span class="o">-</span><span class="w"> </span><span class="nx">Virtual</span><span class="w"> </span><span class="nx">scrolling</span><span class="w"> </span><span class="nx">per</span><span class="w"> </span><span class="nx">timeline</span><span class="w"> </span><span class="nx">lunga</span>
+<span class="o">-</span><span class="w"> </span><span class="nx">Diff</span><span class="w"> </span><span class="nx">computation</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nx">background</span><span class="w"> </span><span class="nx">thread</span>
+</code></pre></div>
+<h3 id="integrazione-chatbar">Integrazione ChatBar<a class="headerlink" href="#integrazione-chatbar" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>💬 &quot;Mostra il grafo delle relazioni di Auth&quot;
+💬 &quot;Trova chunk simili a &#39;password reset&#39;&quot;
+💬 &quot;Crea uno snapshot pre-refactor&quot;
+💬 &quot;Esporta la timeline in Obsidian&quot;
+💬 &quot;Quali entità sono cambiate nell&#39;ultimo snapshot?&quot;
+</code></pre></div>
+<hr />
+<h2 id="10-integrazione-con-altri-pannelli">🔀 10. INTEGRAZIONE CON ALTRI PANNELLI<a class="headerlink" href="#10-integrazione-con-altri-pannelli" title="Permanent link">&para;</a></h2>
+<h3 id="con-storage-panel">Con Storage Panel<a class="headerlink" href="#con-storage-panel" title="Permanent link">&para;</a></h3>
+<ul>
+<li>📊 <strong>Database knowledge</strong> → query via Storage Panel</li>
+<li>🔢 <strong>Embeddings storage</strong> → visualizzato in entrambi</li>
+<li>💾 <strong>Vector index management</strong> → condiviso</li>
+</ul>
+<h3 id="con-sketch-panel">Con Sketch Panel<a class="headerlink" href="#con-sketch-panel" title="Permanent link">&para;</a></h3>
+<ul>
+<li>📋 <strong>Seed knowledge</strong> da ProjectAgent</li>
+<li>🎯 <strong>Plan entities</strong> → ingestate in knowledge</li>
+<li>🔍 <strong>Analysis results</strong> → visualizzati nel grafo</li>
+</ul>
+<h3 id="con-agents-panel">Con Agents Panel<a class="headerlink" href="#con-agents-panel" title="Permanent link">&para;</a></h3>
+<ul>
+<li>🤖 <strong>Activity stream</strong> agenti knowledge</li>
+<li>📊 <strong>Status KnowledgeAgent</strong> → real-time</li>
+<li>🔄 <strong>Sync operations</strong> → tracciabili</li>
+</ul>
+<h3 id="con-logs-panel">Con Logs Panel<a class="headerlink" href="#con-logs-panel" title="Permanent link">&para;</a></h3>
+<ul>
+<li>❌ <strong>Errori knowledge</strong> → push nei log</li>
+<li>📜 <strong>Query history</strong> → condivisa</li>
+<li>🔍 <strong>Trace operations</strong> → linkate</li>
+</ul>
+<h3 id="con-code-panel">Con Code Panel<a class="headerlink" href="#con-code-panel" title="Permanent link">&para;</a></h3>
+<ul>
+<li>🔗 <strong>Code entities</strong> → linkate a file sorgente</li>
+<li>🔧 <strong>Refactor operations</strong> → timeline</li>
+<li>📄 <strong>Documentation</strong> → ingestata come knowledge</li>
+</ul>
+<h3 id="con-preview-panel">Con Preview Panel<a class="headerlink" href="#con-preview-panel" title="Permanent link">&para;</a></h3>
+<ul>
+<li>📸 <strong>Snapshot visualization</strong> → stato knowledge</li>
+<li>📊 <strong>Graph preview</strong> → mini-version</li>
+<li>📈 <strong>Metrics</strong> → da knowledge stats</li>
+</ul>
+<h3 id="con-git-panel">Con Git Panel<a class="headerlink" href="#con-git-panel" title="Permanent link">&para;</a></h3>
+<ul>
+<li>🔖 <strong>Commit markers</strong> → timeline</li>
+<li>🔀 <strong>Branch knowledge</strong> → separate graphs</li>
+<li>📝 <strong>Commit messages</strong> → ingestati come context</li>
+</ul>
+<hr />
+<div align="center">
+
+**📚 Knowledge Panel - Il Cervello Semantico del Workspace**
+
+*Dove i dati diventano conoscenza strutturata, navigabile e interrogabile*
+
+---
+
+### 🎯 Architettura degli Agenti
+
+<div class="highlight"><pre><span></span><code> ┌──────────────── KNOWLEDGE PANEL ────────────────┐
+ │                                                  │
+ │  KnowledgeAgent ────┬──── GraphBuilder ─────────┤
+ │                     │                            │
+ │                     ├──── RAGPipeline ──────────┤
+ │                     │                            │
+ │                     └──── HistorianAgent ───────┤
+ │                                                  │
+ │  KnowledgeSyncAgent (export subsystem)           │
+ │                                                  │
+ │  ProjectAgent (seed knowledge producer)          │
+ │                                                  │
+ └──────────────────────────────────────────────────┘
+</code></pre></div>
+
+</div>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    2025-12-24
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "navigation.indexes", "content.tabs.link", "content.code.copy", "content.code.annotate", "search.suggest", "search.highlight", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
