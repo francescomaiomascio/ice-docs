@@ -28,7 +28,7 @@ https://github.com/francescomaiomascio/ICE-Studio
 If you believe in the vision behind ICE Studio and want to support its development:
 
 <a href="https://www.buymeacoffee.com/francescomaiomascio">
-  <img src="assets/buy-me-a-coffee.png" alt="Buy Me a Coffee" width="200"/>
+  <img src="assets/buy-me-a-coffee-icon.png" alt="Buy Me a Coffee" width="200"/>
 </a>
 
 ---
