@@ -25,6 +25,16 @@ its architecture, runtime model, cognitive principles, and design philosophy.
 
 ---
 
+## 🔒 Source Code
+
+The ICE Studio engine and core implementation are **intentionally not open source**.
+
+This repository hosts **documentation only**.
+
+Private source repository:  
+https://github.com/francescomaiomascio/ICE-Studio
+
+
 ## What ICE Studio Is
 
 ICE Studio is the reference implementation of **ICE Engine** —  
@@ -222,17 +232,6 @@ Internal protocols (ICEP / ICENet) enable:
 - runtime discovery
 - remote coordination
 - cognitive coherence across nodes
-
----
-
-## Source Code
-
-The ICE Studio engine and core implementation are **intentionally not open source**.
-
-This repository hosts **documentation only**.
-
-Private source repository:  
-https://github.com/francescomaiomascio/ICE-Studio
 
 ---
 
