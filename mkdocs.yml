@@ -1,11 +1,12 @@
-site_name: ICE Studio
-site_description: Integrated Cognitive Environment — a system-level development environment
+site_name: ICE Studio Docs
+site_description: Documentation for ICE Studio — Integrated Cognitive Environment
 site_author: Francesco Maiomascio
-site_url: https://francescomaiomascio.github.io/ICE-Studio/
+site_url: https://francescomaiomascio.github.io/ICE-Studio-Docs/
 
-repo_name: francescomaiomascio/ICE-Studio
-repo_url: https://github.com/francescomaiomascio/ICE-Studio
+repo_name: ICE-Studio-Docs
+repo_url: https://github.com/francescomaiomascio/ICE-Studio-Docs
 edit_uri: ""
+
 extra_css:
   - styles/ice.css
 

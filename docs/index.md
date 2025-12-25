@@ -1,36 +1,42 @@
-# ICE Studio
+<div class="ice-hero">
 
-**Integrated Cognitive Environment**
+<h1>ICE Studio Docs</h1>
 
-ICE Studio is a development environment designed to operate as a coherent cognitive system.
+<p class="tagline">
+Integrated Cognitive Environment
+</p>
 
-It integrates code, knowledge, agents, runtime, logs, and interfaces into a single unified environment that persists across time and projects.
+<p class="subtitle">
+A system-level runtime for cognition, not an IDE.
+</p>
 
-ICE Studio is not an IDE, not a chatbot, and not a plugin-based editor.
+</div>
 
-It introduces a new category of system: an **Integrated Cognitive Environment**.
-
----
-
-## Core Principles
-
-- One persistent system runtime
-- Multiple cognitive layers
-- Agent orchestration, not prompts
-- Local-first by design
-- Observable and inspectable at every level
+!!! note "What ICE Studio Is"
+    ICE Studio is a **persistent cognitive system**, not a tool, not an IDE,
+    and not an assistant.
 
 ---
 
-## What You’ll Find Here
+ICE Studio is a **persistent cognitive system** designed to orchestrate
+code, knowledge, agents, runtime, and interfaces as a single evolving environment.
 
-This documentation covers:
+It is not:
+- an IDE
+- an AI assistant
+- a plugin-based editor
 
-- how to get started
-- how the system is structured
-- how cognition is modeled
-- how runtime and networking work
-- how extensibility and security are enforced
+It defines a **new category of system**.
 
-ICE Studio is under active development.  
-The documentation evolves together with the system.
+---
+
+## What This Documentation Covers
+
+- core concepts and terminology  
+- system and runtime architecture  
+- cognitive phases and lifecycle  
+- agent orchestration and knowledge layers  
+- networking, security, and extensibility  
+
+This documentation reflects the **current state of the system**
+and evolves alongside ICE Studio itself.
