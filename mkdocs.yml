@@ -6,6 +6,8 @@ site_url: https://francescomaiomascio.github.io/ICE-Studio/
 repo_name: francescomaiomascio/ICE-Studio
 repo_url: https://github.com/francescomaiomascio/ICE-Studio
 edit_uri: ""
+extra_css:
+  - styles/ice.css
 
 plugins:
   - search
