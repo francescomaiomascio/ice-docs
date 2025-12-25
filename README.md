@@ -1,8 +1,10 @@
 # ICE Studio Documentation
 
-[![Docs](https://img.shields.io/badge/docs-website-brightgreen)](https://francescomaiomascio.github.io/ICE-Studio-Docs/)
-[![Status](https://img.shields.io/badge/status-active-blue)](https://github.com/francescomaiomascio/ICE-Studio-Docs)
-[![License](https://img.shields.io/badge/license-proprietary-lightgrey)](#)
+[![Docs](https://img.shields.io/badge/docs-live-8FB9FF?style=flat)](https://francescomaiomascio.github.io/ICE-Studio-Docs/)
+[![Status](https://img.shields.io/badge/status-active-111827?style=flat)](https://github.com/francescomaiomascio/ICE-Studio-Docs)
+[![License](https://img.shields.io/badge/license-proprietary-6B7280?style=flat)](#)
+[![Sponsor](https://img.shields.io/badge/support-GitHub%20Sponsors-7A7CFF?style=flat)](https://github.com/sponsors/francescomaiomascio)
+
 
 **ICE Studio** is an **Integrated Cognitive Environment**  
 for system-level software development.
