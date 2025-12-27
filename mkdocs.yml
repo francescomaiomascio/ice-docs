@@ -1,10 +1,10 @@
-site_name: ICE Studio Docs
-site_description: Documentation for ICE Studio — Integrated Cognitive Environment
+site_name: ICE Docs
+site_description: Conceptual documentation for ICE — Integrated Cognitive Environment
 site_author: Francesco Maiomascio
-site_url: https://francescomaiomascio.github.io/ICE-Studio-Docs/
+site_url: https://francescomaiomascio.github.io/ice-docs/
 
-repo_name: ICE-Studio-Docs
-repo_url: https://github.com/francescomaiomascio/ICE-Studio-Docs
+repo_name: ice-docs
+repo_url: https://github.com/francescomaiomascio/ice-docs
 edit_uri: ""
 
 extra_css:
@@ -54,19 +54,19 @@ nav:
       - System vs Project: concepts/system-vs-project.md
       - Phases vs Modes: concepts/phases-vs-modes.md
 
-  - ICE Studio:
-      - ice-studio/index.md
-      - Environment: ice-studio/environment.md
-      - Preboot: ice-studio/preboot.md
-      - Workflow: ice-studio/workflow.md
-      - Panels: ice-studio/panels.md
-
   - ICE Engine:
       - ice-engine/index.md
       - Runtime: ice-engine/runtime.md
       - Lifecycle: ice-engine/lifecycle.md
       - Orchestration: ice-engine/orchestration.md
       - Observability: ice-engine/observability.md
+
+  - ICE Studio:
+      - ice-studio/index.md
+      - Environment: ice-studio/environment.md
+      - Preboot: ice-studio/preboot.md
+      - Workflow: ice-studio/workflow.md
+      - Panels: ice-studio/panels.md
 
   - ICE AI:
       - ice-ai/index.md
