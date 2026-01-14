@@ -2,7 +2,6 @@
 
 [![Docs](https://img.shields.io/badge/docs-architecture%20%26%20RFCs-8FB9FF?style=flat)](https://francescomaiomascio.github.io/ice-docs/)
 [![Status](https://img.shields.io/badge/status-active%20research-6B7280?style=flat)](#)
-[![Sponsor](https://img.shields.io/badge/support-GitHub%20Sponsors-7A7CFF?style=flat)](https://github.com/sponsors/francescomaiomascio)
 
 ## Scope
 
