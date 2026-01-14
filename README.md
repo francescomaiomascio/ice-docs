@@ -73,16 +73,3 @@ It includes:
 The documents are written for readers with prior experience in systems engineering, distributed systems, or AI infrastructure.
 
 Implementation lives elsewhere and is intentionally out of scope here.
-
-
-## Support
-
-ICE is independent, long-term research.
-
-Support helps sustain:
-- architectural exploration  
-- documentation and RFC writing  
-- continued investigation into execution-level AI systems  
-
-👉 GitHub Sponsors  
-https://github.com/sponsors/francescomaiomascio
