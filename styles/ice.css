@@ -1,0 +1,159 @@
+:root {
+  --md-primary-fg-color: #8FB9FF;
+  --md-accent-fg-color: #7A7CFF;
+
+  --md-default-bg-color: #0B0F14;
+  --md-default-fg-color: #E6EDF3;
+
+  --md-code-bg-color: #111827;
+  --md-code-fg-color: #E6EDF3;
+
+  --ice-muted: #9AA4B2;
+}
+
+html,
+body {
+  min-height: 100%;
+  background: linear-gradient(
+    180deg,
+    #0B0F14 0%,
+    #0E1420 40%,
+    #111827 100%
+  );
+  overscroll-behavior: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Layout */
+.md-main__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.md-content {
+  padding-top: 0;
+}
+
+.md-main {
+  background: transparent;
+}
+
+.md-content {
+  background: transparent;
+}
+
+/* Typography */
+.md-typeset {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  letter-spacing: 0.01em;
+}
+
+.md-typeset h1 {
+  font-size: 2.6rem;
+  font-weight: 500;
+}
+
+.md-typeset h2 {
+  font-size: 1.9rem;
+  margin-top: 3rem;
+}
+
+.md-typeset h3 {
+  font-size: 1.4rem;
+  margin-top: 2rem;
+}
+
+.md-typeset p {
+  margin: 1.3em 0;
+  max-width: 72ch;
+}
+
+/* Links */
+.md-typeset a {
+  color: var(--md-primary-fg-color);
+  text-decoration: none;
+}
+
+.md-typeset a:hover {
+  text-decoration: underline;
+}
+
+/* Sidebar */
+.md-sidebar {
+  background-color: #0B0F14;
+}
+
+.md-nav__title {
+  font-weight: 600;
+  color: var(--ice-muted);
+}
+
+/* Topbar */
+.md-header {
+  background: linear-gradient(
+    90deg,
+    rgba(11, 15, 20, 0.9),
+    rgba(17, 24, 39, 0.9)
+  );
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.md-search__form {
+  border-radius: 999px;
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+/* Center Search */
+.md-header__inner {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+}
+
+.md-search {
+  justify-self: center;
+  max-width: 420px;
+  width: 100%;
+}
+
+/* HERO */
+.ice-hero {
+  min-height: calc(100vh - var(--md-header-height));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background:
+    radial-gradient(
+      circle at top,
+      rgba(143, 185, 255, 0.14),
+      transparent 60%
+    );
+  text-align: center;
+  padding: 4rem 1.5rem;
+}
+
+.ice-hero h1 {
+  font-size: 3.6rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.ice-hero .tagline {
+  font-size: 1.4rem;
+  color: var(--md-primary-fg-color);
+  margin-top: 0.4rem;
+}
+
+.ice-hero .subtitle {
+  font-size: 1.05rem;
+  color: var(--ice-muted);
+  max-width: 640px;
+  margin-top: 1.2rem;
+}

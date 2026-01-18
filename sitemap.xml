@@ -1,275 +1,571 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://francescomaiomascio.github.io/ICE-Studio/</loc>
-         <lastmod>2025-12-24</lastmod>
+         <loc>https://francescomaiomascio.github.io/ice-docs/</loc>
+         <lastmod>2026-01-18</lastmod>
     </url>
     <url>
-         <loc>https://francescomaiomascio.github.io/ICE-Studio/architecture/</loc>
-         <lastmod>2025-12-24</lastmod>
+         <loc>https://francescomaiomascio.github.io/ice-docs/_legacy/architecture/</loc>
+         <lastmod>2026-01-18</lastmod>
     </url>
     <url>
-         <loc>https://francescomaiomascio.github.io/ICE-Studio/architecture/backend-runtime/</loc>
-         <lastmod>2025-12-24</lastmod>
+         <loc>https://francescomaiomascio.github.io/ice-docs/_legacy/architecture/backend-runtime/</loc>
+         <lastmod>2026-01-18</lastmod>
     </url>
     <url>
-         <loc>https://francescomaiomascio.github.io/ICE-Studio/architecture/engine/</loc>
-         <lastmod>2025-12-24</lastmod>
+         <loc>https://francescomaiomascio.github.io/ice-docs/_legacy/architecture/engine/</loc>
+         <lastmod>2026-01-18</lastmod>
     </url>
     <url>
-         <loc>https://francescomaiomascio.github.io/ICE-Studio/architecture/gui/</loc>
-         <lastmod>2025-12-24</lastmod>
+         <loc>https://francescomaiomascio.github.io/ice-docs/_legacy/architecture/gui/</loc>
+         <lastmod>2026-01-18</lastmod>
     </url>
     <url>
-         <loc>https://francescomaiomascio.github.io/ICE-Studio/architecture/logical-topology/</loc>
-         <lastmod>2025-12-24</lastmod>
+         <loc>https://francescomaiomascio.github.io/ice-docs/_legacy/architecture/logical-topology/</loc>
+         <lastmod>2026-01-18</lastmod>
     </url>
     <url>
-         <loc>https://francescomaiomascio.github.io/ICE-Studio/architecture/phases/</loc>
-         <lastmod>2025-12-24</lastmod>
+         <loc>https://francescomaiomascio.github.io/ice-docs/_legacy/architecture/phases/</loc>
+         <lastmod>2026-01-18</lastmod>
     </url>
     <url>
-         <loc>https://francescomaiomascio.github.io/ICE-Studio/cognition/</loc>
-         <lastmod>2025-12-24</lastmod>
+         <loc>https://francescomaiomascio.github.io/ice-docs/_legacy/development/</loc>
+         <lastmod>2026-01-18</lastmod>
     </url>
     <url>
-         <loc>https://francescomaiomascio.github.io/ICE-Studio/cognition/agents/</loc>
-         <lastmod>2025-12-24</lastmod>
+         <loc>https://francescomaiomascio.github.io/ice-docs/_legacy/development/decisions/</loc>
+         <lastmod>2026-01-18</lastmod>
     </url>
     <url>
-         <loc>https://francescomaiomascio.github.io/ICE-Studio/cognition/knowledge/</loc>
-         <lastmod>2025-12-24</lastmod>
+         <loc>https://francescomaiomascio.github.io/ice-docs/_legacy/development/milestones/</loc>
+         <lastmod>2026-01-18</lastmod>
     </url>
     <url>
-         <loc>https://francescomaiomascio.github.io/ICE-Studio/cognition/llm/</loc>
-         <lastmod>2025-12-24</lastmod>
+         <loc>https://francescomaiomascio.github.io/ice-docs/_legacy/development/roadmap/</loc>
+         <lastmod>2026-01-18</lastmod>
     </url>
     <url>
-         <loc>https://francescomaiomascio.github.io/ICE-Studio/cognition/memory/</loc>
-         <lastmod>2025-12-24</lastmod>
+         <loc>https://francescomaiomascio.github.io/ice-docs/_legacy/development/status/</loc>
+         <lastmod>2026-01-18</lastmod>
     </url>
     <url>
-         <loc>https://francescomaiomascio.github.io/ICE-Studio/concepts/</loc>
-         <lastmod>2025-12-24</lastmod>
+         <loc>https://francescomaiomascio.github.io/ice-docs/_legacy/extensibility/</loc>
+         <lastmod>2026-01-18</lastmod>
     </url>
     <url>
-         <loc>https://francescomaiomascio.github.io/ICE-Studio/concepts/knowledge-types/</loc>
-         <lastmod>2025-12-24</lastmod>
+         <loc>https://francescomaiomascio.github.io/ice-docs/_legacy/extensibility/agents/</loc>
+         <lastmod>2026-01-18</lastmod>
     </url>
     <url>
-         <loc>https://francescomaiomascio.github.io/ICE-Studio/concepts/phases-vs-modes/</loc>
-         <lastmod>2025-12-24</lastmod>
+         <loc>https://francescomaiomascio.github.io/ice-docs/_legacy/extensibility/future-engines/</loc>
+         <lastmod>2026-01-18</lastmod>
     </url>
     <url>
-         <loc>https://francescomaiomascio.github.io/ICE-Studio/concepts/project-vs-workspace/</loc>
-         <lastmod>2025-12-24</lastmod>
+         <loc>https://francescomaiomascio.github.io/ice-docs/_legacy/extensibility/plugins/</loc>
+         <lastmod>2026-01-18</lastmod>
     </url>
     <url>
-         <loc>https://francescomaiomascio.github.io/ICE-Studio/concepts/system-vs-project/</loc>
-         <lastmod>2025-12-24</lastmod>
+         <loc>https://francescomaiomascio.github.io/ice-docs/_legacy/extensibility/protocols/</loc>
+         <lastmod>2026-01-18</lastmod>
     </url>
     <url>
-         <loc>https://francescomaiomascio.github.io/ICE-Studio/concepts/terminology/</loc>
-         <lastmod>2025-12-24</lastmod>
+         <loc>https://francescomaiomascio.github.io/ice-docs/_legacy/security/</loc>
+         <lastmod>2026-01-18</lastmod>
     </url>
     <url>
-         <loc>https://francescomaiomascio.github.io/ICE-Studio/development/</loc>
-         <lastmod>2025-12-24</lastmod>
+         <loc>https://francescomaiomascio.github.io/ice-docs/_legacy/security/data-isolation/</loc>
+         <lastmod>2026-01-18</lastmod>
     </url>
     <url>
-         <loc>https://francescomaiomascio.github.io/ICE-Studio/development/decisions/</loc>
-         <lastmod>2025-12-24</lastmod>
+         <loc>https://francescomaiomascio.github.io/ice-docs/_legacy/security/knowledge-boundaries/</loc>
+         <lastmod>2026-01-18</lastmod>
     </url>
     <url>
-         <loc>https://francescomaiomascio.github.io/ICE-Studio/development/milestones/</loc>
-         <lastmod>2025-12-24</lastmod>
+         <loc>https://francescomaiomascio.github.io/ice-docs/_legacy/security/local-first/</loc>
+         <lastmod>2026-01-18</lastmod>
     </url>
     <url>
-         <loc>https://francescomaiomascio.github.io/ICE-Studio/development/roadmap/</loc>
-         <lastmod>2025-12-24</lastmod>
+         <loc>https://francescomaiomascio.github.io/ice-docs/_legacy/security/threat-model/</loc>
+         <lastmod>2026-01-18</lastmod>
     </url>
     <url>
-         <loc>https://francescomaiomascio.github.io/ICE-Studio/development/status/</loc>
-         <lastmod>2025-12-24</lastmod>
+         <loc>https://francescomaiomascio.github.io/ice-docs/architecture/</loc>
+         <lastmod>2026-01-18</lastmod>
     </url>
     <url>
-         <loc>https://francescomaiomascio.github.io/ICE-Studio/extensibility/</loc>
-         <lastmod>2025-12-24</lastmod>
+         <loc>https://francescomaiomascio.github.io/ice-docs/architecture/backend-runtime/</loc>
+         <lastmod>2026-01-18</lastmod>
     </url>
     <url>
-         <loc>https://francescomaiomascio.github.io/ICE-Studio/extensibility/agents/</loc>
-         <lastmod>2025-12-24</lastmod>
+         <loc>https://francescomaiomascio.github.io/ice-docs/architecture/engine/</loc>
+         <lastmod>2026-01-18</lastmod>
     </url>
     <url>
-         <loc>https://francescomaiomascio.github.io/ICE-Studio/extensibility/future-engines/</loc>
-         <lastmod>2025-12-24</lastmod>
+         <loc>https://francescomaiomascio.github.io/ice-docs/architecture/gui/</loc>
+         <lastmod>2026-01-18</lastmod>
     </url>
     <url>
-         <loc>https://francescomaiomascio.github.io/ICE-Studio/extensibility/plugins/</loc>
-         <lastmod>2025-12-24</lastmod>
+         <loc>https://francescomaiomascio.github.io/ice-docs/architecture/logical-topology/</loc>
+         <lastmod>2026-01-18</lastmod>
     </url>
     <url>
-         <loc>https://francescomaiomascio.github.io/ICE-Studio/extensibility/protocols/</loc>
-         <lastmod>2025-12-24</lastmod>
+         <loc>https://francescomaiomascio.github.io/ice-docs/architecture/phases/</loc>
+         <lastmod>2026-01-18</lastmod>
     </url>
     <url>
-         <loc>https://francescomaiomascio.github.io/ICE-Studio/getting-started/</loc>
-         <lastmod>2025-12-24</lastmod>
+         <loc>https://francescomaiomascio.github.io/ice-docs/cognition/</loc>
+         <lastmod>2026-01-18</lastmod>
     </url>
     <url>
-         <loc>https://francescomaiomascio.github.io/ICE-Studio/getting-started/first-launch/</loc>
-         <lastmod>2025-12-24</lastmod>
+         <loc>https://francescomaiomascio.github.io/ice-docs/cognition/agents/</loc>
+         <lastmod>2026-01-18</lastmod>
     </url>
     <url>
-         <loc>https://francescomaiomascio.github.io/ICE-Studio/getting-started/gui/</loc>
-         <lastmod>2025-12-24</lastmod>
+         <loc>https://francescomaiomascio.github.io/ice-docs/cognition/knowledge/</loc>
+         <lastmod>2026-01-18</lastmod>
     </url>
     <url>
-         <loc>https://francescomaiomascio.github.io/ICE-Studio/getting-started/local-runtime/</loc>
-         <lastmod>2025-12-24</lastmod>
+         <loc>https://francescomaiomascio.github.io/ice-docs/cognition/llm/</loc>
+         <lastmod>2026-01-18</lastmod>
     </url>
     <url>
-         <loc>https://francescomaiomascio.github.io/ICE-Studio/getting-started/overview/</loc>
-         <lastmod>2025-12-24</lastmod>
+         <loc>https://francescomaiomascio.github.io/ice-docs/cognition/memory/</loc>
+         <lastmod>2026-01-18</lastmod>
     </url>
     <url>
-         <loc>https://francescomaiomascio.github.io/ICE-Studio/getting-started/requirements/</loc>
-         <lastmod>2025-12-24</lastmod>
+         <loc>https://francescomaiomascio.github.io/ice-docs/concepts/</loc>
+         <lastmod>2026-01-18</lastmod>
     </url>
     <url>
-         <loc>https://francescomaiomascio.github.io/ICE-Studio/networking/</loc>
-         <lastmod>2025-12-24</lastmod>
+         <loc>https://francescomaiomascio.github.io/ice-docs/concepts/agents/</loc>
+         <lastmod>2026-01-18</lastmod>
     </url>
     <url>
-         <loc>https://francescomaiomascio.github.io/ICE-Studio/networking/flake/</loc>
-         <lastmod>2025-12-24</lastmod>
+         <loc>https://francescomaiomascio.github.io/ice-docs/concepts/cognition/</loc>
+         <lastmod>2026-01-18</lastmod>
     </url>
     <url>
-         <loc>https://francescomaiomascio.github.io/ICE-Studio/networking/icenet/</loc>
-         <lastmod>2025-12-24</lastmod>
+         <loc>https://francescomaiomascio.github.io/ice-docs/concepts/knowledge-types/</loc>
+         <lastmod>2026-01-18</lastmod>
     </url>
     <url>
-         <loc>https://francescomaiomascio.github.io/ICE-Studio/networking/icep/</loc>
-         <lastmod>2025-12-24</lastmod>
+         <loc>https://francescomaiomascio.github.io/ice-docs/concepts/knowledge/</loc>
+         <lastmod>2026-01-18</lastmod>
     </url>
     <url>
-         <loc>https://francescomaiomascio.github.io/ICE-Studio/networking/network-topology/</loc>
-         <lastmod>2025-12-24</lastmod>
+         <loc>https://francescomaiomascio.github.io/ice-docs/concepts/lifecycle/</loc>
+         <lastmod>2026-01-18</lastmod>
     </url>
     <url>
-         <loc>https://francescomaiomascio.github.io/ICE-Studio/networking/snowball/</loc>
-         <lastmod>2025-12-24</lastmod>
+         <loc>https://francescomaiomascio.github.io/ice-docs/concepts/phases-vs-modes/</loc>
+         <lastmod>2026-01-18</lastmod>
     </url>
     <url>
-         <loc>https://francescomaiomascio.github.io/ICE-Studio/runtime/</loc>
-         <lastmod>2025-12-24</lastmod>
+         <loc>https://francescomaiomascio.github.io/ice-docs/concepts/project-vs-workspace/</loc>
+         <lastmod>2026-01-18</lastmod>
     </url>
     <url>
-         <loc>https://francescomaiomascio.github.io/ICE-Studio/runtime/diagnostics/</loc>
-         <lastmod>2025-12-24</lastmod>
+         <loc>https://francescomaiomascio.github.io/ice-docs/concepts/runtime/</loc>
+         <lastmod>2026-01-18</lastmod>
     </url>
     <url>
-         <loc>https://francescomaiomascio.github.io/ICE-Studio/runtime/lifecycle/</loc>
-         <lastmod>2025-12-24</lastmod>
+         <loc>https://francescomaiomascio.github.io/ice-docs/concepts/system-vs-project/</loc>
+         <lastmod>2026-01-18</lastmod>
     </url>
     <url>
-         <loc>https://francescomaiomascio.github.io/ICE-Studio/runtime/logging/</loc>
-         <lastmod>2025-12-24</lastmod>
+         <loc>https://francescomaiomascio.github.io/ice-docs/concepts/terminology/</loc>
+         <lastmod>2026-01-18</lastmod>
     </url>
     <url>
-         <loc>https://francescomaiomascio.github.io/ICE-Studio/runtime/orchestration/</loc>
-         <lastmod>2025-12-24</lastmod>
+         <loc>https://francescomaiomascio.github.io/ice-docs/development/</loc>
+         <lastmod>2026-01-18</lastmod>
     </url>
     <url>
-         <loc>https://francescomaiomascio.github.io/ICE-Studio/security/</loc>
-         <lastmod>2025-12-24</lastmod>
+         <loc>https://francescomaiomascio.github.io/ice-docs/development/decisions/</loc>
+         <lastmod>2026-01-18</lastmod>
     </url>
     <url>
-         <loc>https://francescomaiomascio.github.io/ICE-Studio/security/data-isolation/</loc>
-         <lastmod>2025-12-24</lastmod>
+         <loc>https://francescomaiomascio.github.io/ice-docs/development/milestones/</loc>
+         <lastmod>2026-01-18</lastmod>
     </url>
     <url>
-         <loc>https://francescomaiomascio.github.io/ICE-Studio/security/knowledge-boundaries/</loc>
-         <lastmod>2025-12-24</lastmod>
+         <loc>https://francescomaiomascio.github.io/ice-docs/development/roadmap/</loc>
+         <lastmod>2026-01-18</lastmod>
     </url>
     <url>
-         <loc>https://francescomaiomascio.github.io/ICE-Studio/security/local-first/</loc>
-         <lastmod>2025-12-24</lastmod>
+         <loc>https://francescomaiomascio.github.io/ice-docs/development/status/</loc>
+         <lastmod>2026-01-18</lastmod>
     </url>
     <url>
-         <loc>https://francescomaiomascio.github.io/ICE-Studio/security/threat-model/</loc>
-         <lastmod>2025-12-24</lastmod>
+         <loc>https://francescomaiomascio.github.io/ice-docs/extensibility/</loc>
+         <lastmod>2026-01-18</lastmod>
     </url>
     <url>
-         <loc>https://francescomaiomascio.github.io/ICE-Studio/specs/panels/OVERVIEW/</loc>
-         <lastmod>2025-12-24</lastmod>
+         <loc>https://francescomaiomascio.github.io/ice-docs/extensibility/agents/</loc>
+         <lastmod>2026-01-18</lastmod>
     </url>
     <url>
-         <loc>https://francescomaiomascio.github.io/ICE-Studio/specs/panels/PANEL_01_STORAGE/</loc>
-         <lastmod>2025-12-24</lastmod>
+         <loc>https://francescomaiomascio.github.io/ice-docs/extensibility/future-engines/</loc>
+         <lastmod>2026-01-18</lastmod>
     </url>
     <url>
-         <loc>https://francescomaiomascio.github.io/ICE-Studio/specs/panels/PANEL_02_SKETCH/</loc>
-         <lastmod>2025-12-24</lastmod>
+         <loc>https://francescomaiomascio.github.io/ice-docs/extensibility/plugins/</loc>
+         <lastmod>2026-01-18</lastmod>
     </url>
     <url>
-         <loc>https://francescomaiomascio.github.io/ICE-Studio/specs/panels/PANEL_03_AGENTS/</loc>
-         <lastmod>2025-12-24</lastmod>
+         <loc>https://francescomaiomascio.github.io/ice-docs/extensibility/protocols/</loc>
+         <lastmod>2026-01-18</lastmod>
     </url>
     <url>
-         <loc>https://francescomaiomascio.github.io/ICE-Studio/specs/panels/PANEL_04_KNOWLEDGE/</loc>
-         <lastmod>2025-12-24</lastmod>
+         <loc>https://francescomaiomascio.github.io/ice-docs/getting-started/</loc>
+         <lastmod>2026-01-18</lastmod>
     </url>
     <url>
-         <loc>https://francescomaiomascio.github.io/ICE-Studio/specs/panels/PANEL_05_LOGS/</loc>
-         <lastmod>2025-12-24</lastmod>
+         <loc>https://francescomaiomascio.github.io/ice-docs/getting-started/first-launch/</loc>
+         <lastmod>2026-01-18</lastmod>
     </url>
     <url>
-         <loc>https://francescomaiomascio.github.io/ICE-Studio/specs/panels/PANEL_06_CODE/</loc>
-         <lastmod>2025-12-24</lastmod>
+         <loc>https://francescomaiomascio.github.io/ice-docs/getting-started/first-session/</loc>
+         <lastmod>2026-01-18</lastmod>
     </url>
     <url>
-         <loc>https://francescomaiomascio.github.io/ICE-Studio/specs/panels/PANEL_07_GIT/</loc>
-         <lastmod>2025-12-24</lastmod>
+         <loc>https://francescomaiomascio.github.io/ice-docs/getting-started/gui/</loc>
+         <lastmod>2026-01-18</lastmod>
     </url>
     <url>
-         <loc>https://francescomaiomascio.github.io/ICE-Studio/specs/panels/PANEL_08_PREVIEW/</loc>
-         <lastmod>2025-12-24</lastmod>
+         <loc>https://francescomaiomascio.github.io/ice-docs/getting-started/local-runtime/</loc>
+         <lastmod>2026-01-18</lastmod>
     </url>
     <url>
-         <loc>https://francescomaiomascio.github.io/ICE-Studio/specs/panels/PANEL_09_ANALYSIS/</loc>
-         <lastmod>2025-12-24</lastmod>
+         <loc>https://francescomaiomascio.github.io/ice-docs/getting-started/mental-model/</loc>
+         <lastmod>2026-01-18</lastmod>
     </url>
     <url>
-         <loc>https://francescomaiomascio.github.io/ICE-Studio/specs/panels/PANEL_11_SETTINGS/</loc>
-         <lastmod>2025-12-24</lastmod>
+         <loc>https://francescomaiomascio.github.io/ice-docs/getting-started/overview/</loc>
+         <lastmod>2026-01-18</lastmod>
     </url>
     <url>
-         <loc>https://francescomaiomascio.github.io/ICE-Studio/specs/panels/PANNEL_10_CONTAINERS/</loc>
-         <lastmod>2025-12-24</lastmod>
+         <loc>https://francescomaiomascio.github.io/ice-docs/getting-started/requirements/</loc>
+         <lastmod>2026-01-18</lastmod>
     </url>
     <url>
-         <loc>https://francescomaiomascio.github.io/ICE-Studio/specs/panels/template-panel/</loc>
-         <lastmod>2025-12-24</lastmod>
+         <loc>https://francescomaiomascio.github.io/ice-docs/getting-started/what-is-ice/</loc>
+         <lastmod>2026-01-18</lastmod>
     </url>
     <url>
-         <loc>https://francescomaiomascio.github.io/ICE-Studio/tutorials/</loc>
-         <lastmod>2025-12-24</lastmod>
+         <loc>https://francescomaiomascio.github.io/ice-docs/ice-ai/</loc>
+         <lastmod>2026-01-18</lastmod>
     </url>
     <url>
-         <loc>https://francescomaiomascio.github.io/ICE-Studio/tutorials/dashboard-tour/</loc>
-         <lastmod>2025-12-24</lastmod>
+         <loc>https://francescomaiomascio.github.io/ice-docs/ice-ai/agents/</loc>
+         <lastmod>2026-01-18</lastmod>
     </url>
     <url>
-         <loc>https://francescomaiomascio.github.io/ICE-Studio/tutorials/first-run/</loc>
-         <lastmod>2025-12-24</lastmod>
+         <loc>https://francescomaiomascio.github.io/ice-docs/ice-ai/embeddings/</loc>
+         <lastmod>2026-01-18</lastmod>
     </url>
     <url>
-         <loc>https://francescomaiomascio.github.io/ICE-Studio/tutorials/logs-and-analysis/</loc>
-         <lastmod>2025-12-24</lastmod>
+         <loc>https://francescomaiomascio.github.io/ice-docs/ice-ai/knowledge/</loc>
+         <lastmod>2026-01-18</lastmod>
     </url>
     <url>
-         <loc>https://francescomaiomascio.github.io/ICE-Studio/tutorials/system-agent/</loc>
-         <lastmod>2025-12-24</lastmod>
+         <loc>https://francescomaiomascio.github.io/ice-docs/ice-ai/llm/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/ice-ai/memory/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/ice-engine/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/ice-engine/diagnostics/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/ice-engine/lifecycle/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/ice-engine/logging/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/ice-engine/observability/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/ice-engine/orchestration/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/ice-engine/runtime/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/ice-studio/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/ice-studio/environment/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/ice-studio/panels/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/ice-studio/preboot/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/ice-studio/workflow/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/ice-studio/specs/panels/OVERVIEW/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/ice-studio/specs/panels/PANEL_01_STORAGE/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/ice-studio/specs/panels/PANEL_02_SKETCH/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/ice-studio/specs/panels/PANEL_03_AGENTS/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/ice-studio/specs/panels/PANEL_04_KNOWLEDGE/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/ice-studio/specs/panels/PANEL_05_LOGS/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/ice-studio/specs/panels/PANEL_06_CODE/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/ice-studio/specs/panels/PANEL_07_GIT/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/ice-studio/specs/panels/PANEL_08_PREVIEW/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/ice-studio/specs/panels/PANEL_09_ANALYSIS/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/ice-studio/specs/panels/PANEL_11_SETTINGS/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/ice-studio/specs/panels/PANNEL_10_CONTAINERS/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/ice-studio/specs/panels/template-panel/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/icenet/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/icenet/discovery/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/icenet/flake/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/icenet/icenet/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/icenet/icep/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/icenet/network-topology/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/icenet/snowball/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/icenet/topology/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/icep/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/icep/message-model/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/icep/overview/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/meta/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/meta/roadmap/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/meta/status/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/networking/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/networking/flake/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/networking/icenet/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/networking/icep/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/networking/network-topology/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/networking/snowball/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/runtime/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/runtime/diagnostics/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/runtime/lifecycle/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/runtime/logging/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/runtime/orchestration/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/security/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/security/data-isolation/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/security/knowledge-boundaries/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/security/local-first/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/security/threat-model/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/specs/panels/OVERVIEW/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/specs/panels/PANEL_01_STORAGE/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/specs/panels/PANEL_02_SKETCH/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/specs/panels/PANEL_03_AGENTS/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/specs/panels/PANEL_04_KNOWLEDGE/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/specs/panels/PANEL_05_LOGS/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/specs/panels/PANEL_06_CODE/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/specs/panels/PANEL_07_GIT/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/specs/panels/PANEL_08_PREVIEW/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/specs/panels/PANEL_09_ANALYSIS/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/specs/panels/PANEL_11_SETTINGS/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/specs/panels/PANNEL_10_CONTAINERS/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/specs/panels/template-panel/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/tutorials/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/tutorials/dashboard-tour/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/tutorials/first-run/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/tutorials/logs-and-analysis/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://francescomaiomascio.github.io/ice-docs/tutorials/system-agent/</loc>
+         <lastmod>2026-01-18</lastmod>
     </url>
 </urlset>
