@@ -1,5 +1,4 @@
-# Logs and Analysis
+# ulogs and analysis
 
-ICE Studio exposes logs as structured events, not files.
-
-Logs are first-class citizens in the system.
+> Canonical ICE documentation node.
+> Content coming next.

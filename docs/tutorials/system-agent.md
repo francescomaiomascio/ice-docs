@@ -1,3 +1,4 @@
-# System Agent
+# usystem agent
 
-The System Agent manages global reasoning, orchestration, and long-term knowledge.
+> Canonical ICE documentation node.
+> Content coming next.

@@ -1,3 +1,4 @@
-# Tutorials
+# uindex
 
-Hands-on guides for using ICE Studio in real scenarios.
+> Canonical ICE documentation node.
+> Content coming next.

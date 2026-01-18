@@ -1,42 +1,50 @@
-<div class="ice-hero">
+# ICE Docs
 
-<h1>ICE Studio Docs</h1>
-
-<p class="tagline">
-Integrated Cognitive Environment
-</p>
-
-<p class="subtitle">
-A system-level runtime for cognition, not an IDE.
-</p>
-
-</div>
-
-!!! note "What ICE Studio Is"
-    ICE Studio is a **persistent cognitive system**, not a tool, not an IDE,
-    and not an assistant.
+**Integrated Cognitive Environment — Conceptual Documentation**
 
 ---
 
-ICE Studio is a **persistent cognitive system** designed to orchestrate
-code, knowledge, agents, runtime, and interfaces as a single evolving environment.
+## Manifesto
 
-It is not:
-- an IDE
-- an AI assistant
-- a plugin-based editor
+ICE is not a product.  
+ICE is not a tool.  
+ICE is not an IDE.
 
-It defines a **new category of system**.
+ICE is a **system-level cognitive architecture** designed to persist, reason, and evolve across time, projects, and contexts.
+
+This documentation does **not** describe a filesystem.  
+It does **not** mirror the current implementation line by line.
+
+It describes the **conceptual architecture** of the ICE universe.
 
 ---
 
-## What This Documentation Covers
+## What ICE Is
 
-- core concepts and terminology  
-- system and runtime architecture  
-- cognitive phases and lifecycle  
-- agent orchestration and knowledge layers  
-- networking, security, and extensibility  
+ICE is a **persistent cognitive system** that orchestrates:
 
-This documentation reflects the **current state of the system**
-and evolves alongside ICE Studio itself.
+- code
+- knowledge
+- agents
+- runtime
+- interfaces
+- networks
+
+as parts of a **single evolving environment**.
+
+ICE treats cognition as a *first-class system concern*, not as a feature layered on top of tools.
+
+There are no traditional "sessions".  
+There is a **continuous system state**.
+
+---
+
+## ICE Lab — The Conceptual Universe
+
+Within this documentation, ICE is structured as a set of **conceptual domains**.
+
+They may currently live in the same repository or runtime.  
+That is an implementation detail.
+
+Conceptually, ICE is this:
+

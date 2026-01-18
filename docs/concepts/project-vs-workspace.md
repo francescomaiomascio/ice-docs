@@ -1,5 +1,4 @@
-# Project vs Workspace
+# uproject vs workspace
 
-A Project is a cognitive entity.
-
-A workspace is a UI representation, not a system concept.
+> Canonical ICE documentation node.
+> Content coming next.

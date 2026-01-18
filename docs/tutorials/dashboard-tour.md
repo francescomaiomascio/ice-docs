@@ -1,5 +1,4 @@
-# Dashboard Tour
+# udashboard tour
 
-The Dashboard represents the global cognitive state of the system.
-
-It is not tied to a single project.
+> Canonical ICE documentation node.
+> Content coming next.

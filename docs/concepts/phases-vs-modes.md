@@ -1,5 +1,4 @@
-# Phases vs Modes
+# uphases vs modes
 
-Phases describe lifecycle stages.
-
-Modes describe behavior within a phase.
+> Canonical ICE documentation node.
+> Content coming next.

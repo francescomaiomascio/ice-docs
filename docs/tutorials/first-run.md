@@ -1,3 +1,4 @@
-# First Run
+# ufirst run
 
-This tutorial walks through starting ICE Studio and reaching the Dashboard.
+> Canonical ICE documentation node.
+> Content coming next.

@@ -1,3 +1,4 @@
-# Knowledge Types
+# uknowledge types
 
-ICE Studio separates knowledge into Global, User, and Project layers.
+> Canonical ICE documentation node.
+> Content coming next.
